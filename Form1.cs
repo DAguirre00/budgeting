@@ -26,5 +26,10 @@ namespace Big_Project_practice
         {
 
         }
+
+        private void Calculate_Button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
