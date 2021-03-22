@@ -56,6 +56,8 @@ namespace Big_Project_practice
             this.label10 = new System.Windows.Forms.Label();
             this.Time_Req_Text = new System.Windows.Forms.TextBox();
             this.Calculate_Button = new System.Windows.Forms.Button();
+            this.Tax_Textbox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Income_Const_Box
@@ -90,7 +92,54 @@ namespace Big_Project_practice
             this.ComboBoxState.Items.AddRange(new object[] {
             "AL",
             "AK",
-            "AZ"});
+            "AZ",
+            "AR",
+            "CA",
+            "CO",
+            "CT",
+            "DE",
+            "FL",
+            "GA",
+            "HI",
+            "ID",
+            "IL",
+            "IN",
+            "IA",
+            "KS",
+            "KY",
+            "LA",
+            "ME",
+            "MD",
+            "MA",
+            "MI",
+            "MN",
+            "MS",
+            "MO",
+            "MT",
+            "NE",
+            "NV",
+            "NH",
+            "NJ",
+            "NM",
+            "NY",
+            "NC",
+            "ND",
+            "OH",
+            "OK",
+            "OR",
+            "PA",
+            "RI",
+            "SC",
+            "SD",
+            "TN",
+            "TX",
+            "UT",
+            "VT",
+            "VA",
+            "WA",
+            "WV",
+            "WI",
+            "WY"});
             this.ComboBoxState.Location = new System.Drawing.Point(273, 54);
             this.ComboBoxState.Name = "ComboBoxState";
             this.ComboBoxState.Size = new System.Drawing.Size(121, 23);
@@ -228,7 +277,7 @@ namespace Big_Project_practice
             // 
             // Tot_Savings_Text
             // 
-            this.Tot_Savings_Text.Location = new System.Drawing.Point(512, 201);
+            this.Tot_Savings_Text.Location = new System.Drawing.Point(512, 200);
             this.Tot_Savings_Text.Name = "Tot_Savings_Text";
             this.Tot_Savings_Text.ReadOnly = true;
             this.Tot_Savings_Text.Size = new System.Drawing.Size(100, 23);
@@ -293,12 +342,32 @@ namespace Big_Project_practice
             this.Calculate_Button.TabIndex = 26;
             this.Calculate_Button.Text = "Calculate";
             this.Calculate_Button.UseVisualStyleBackColor = true;
+            this.Calculate_Button.Click += new System.EventHandler(this.Calculate_Button_Click);
+            // 
+            // Tax_Textbox
+            // 
+            this.Tax_Textbox.Location = new System.Drawing.Point(512, 54);
+            this.Tax_Textbox.Name = "Tax_Textbox";
+            this.Tax_Textbox.ReadOnly = true;
+            this.Tax_Textbox.Size = new System.Drawing.Size(100, 23);
+            this.Tax_Textbox.TabIndex = 27;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(512, 36);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(70, 15);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "Income Tax:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.Tax_Textbox);
             this.Controls.Add(this.Calculate_Button);
             this.Controls.Add(this.Time_Req_Text);
             this.Controls.Add(this.label10);
@@ -363,6 +432,8 @@ namespace Big_Project_practice
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox Time_Req_Text;
         private System.Windows.Forms.Button Calculate_Button;
+        private System.Windows.Forms.TextBox Tax_Textbox;
+        private System.Windows.Forms.Label label11;
     }
 }
 
