@@ -13,3 +13,12 @@ C:\Users\Cooper\source\repos\Big Project practice\obj\Debug\netcoreapp3.1\Big Pr
 C:\Users\Cooper\source\repos\Big Project practice\obj\Debug\netcoreapp3.1\Big Project practice.dll
 C:\Users\Cooper\source\repos\Big Project practice\obj\Debug\netcoreapp3.1\Big Project practice.pdb
 C:\Users\Cooper\source\repos\Big Project practice\obj\Debug\netcoreapp3.1\Big Project practice.genruntimeconfig.cache
+D:\GitRep\budget\obj\Debug\netcoreapp3.1\Big Project practice.csprojAssemblyReference.cache
+D:\GitRep\budget\obj\Debug\netcoreapp3.1\Big_Project_practice.Form1.resources
+D:\GitRep\budget\obj\Debug\netcoreapp3.1\Big_Project_practice.Properties.Resources.resources
+D:\GitRep\budget\obj\Debug\netcoreapp3.1\Big Project practice.csproj.GenerateResource.cache
+D:\GitRep\budget\obj\Debug\netcoreapp3.1\Big Project practice.AssemblyInfoInputs.cache
+D:\GitRep\budget\obj\Debug\netcoreapp3.1\Big Project practice.AssemblyInfo.cs
+D:\GitRep\budget\obj\Debug\netcoreapp3.1\Big Project practice.csproj.CoreCompileInputs.cache
+D:\GitRep\budget\obj\Debug\netcoreapp3.1\Big Project practice.dll
+D:\GitRep\budget\obj\Debug\netcoreapp3.1\Big Project practice.pdb
