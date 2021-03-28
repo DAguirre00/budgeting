@@ -12,7 +12,7 @@ namespace Big_Project_practice
 
         public void withdraw(double savings, double checking, double amount)
         {
-			if (//account == 's' need to make it so it looks at the form)
+			if (account == 's')
 			{
 				if (amount <= savings)
 				{
@@ -23,7 +23,7 @@ namespace Big_Project_practice
 					//cout << "You dont have enough money." << endl;
 				}
 			}
-			else if (//account == 'c' need to make it so it looks at the form)
+			else if (account == 'c')
 			{
 				if (amount <= checking)
 				{
@@ -46,9 +46,9 @@ namespace Big_Project_practice
 				//cout << "Enter a proper account." << endl;
 			}
 		}
-        public void deposit(double savings, double checking, double amount)
+        public void Deposit(double savings, double checking, double amount)
         {
-			if (//account == 's')
+			if (account == 's')
 			{
 				savings = + amount;
 			}
@@ -93,7 +93,7 @@ namespace Big_Project_practice
 				// << "Enter a valid option." << endl;
 			}
 		}
-        public void check()
+        public void Check()
         {
 
         }

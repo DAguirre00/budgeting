@@ -44,8 +44,7 @@ namespace Big_Project_practice
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string[] options = new string[] { "Savings", "Checkings" };
-            comboBox1.Items.AddRange(options);
+            
         }
 
         private void label13_Click(object sender, EventArgs e)
