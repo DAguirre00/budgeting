@@ -22,3 +22,12 @@ D:\GitRep\budget\obj\Debug\netcoreapp3.1\Big Project practice.AssemblyInfo.cs
 D:\GitRep\budget\obj\Debug\netcoreapp3.1\Big Project practice.csproj.CoreCompileInputs.cache
 D:\GitRep\budget\obj\Debug\netcoreapp3.1\Big Project practice.dll
 D:\GitRep\budget\obj\Debug\netcoreapp3.1\Big Project practice.pdb
+C:\Users\domin\Documents\Git\obj\Debug\netcoreapp3.1\Big Project practice.csprojAssemblyReference.cache
+C:\Users\domin\Documents\Git\obj\Debug\netcoreapp3.1\Big_Project_practice.Form1.resources
+C:\Users\domin\Documents\Git\obj\Debug\netcoreapp3.1\Big_Project_practice.Properties.Resources.resources
+C:\Users\domin\Documents\Git\obj\Debug\netcoreapp3.1\Big Project practice.csproj.GenerateResource.cache
+C:\Users\domin\Documents\Git\obj\Debug\netcoreapp3.1\Big Project practice.AssemblyInfoInputs.cache
+C:\Users\domin\Documents\Git\obj\Debug\netcoreapp3.1\Big Project practice.AssemblyInfo.cs
+C:\Users\domin\Documents\Git\obj\Debug\netcoreapp3.1\Big Project practice.csproj.CoreCompileInputs.cache
+C:\Users\domin\Documents\Git\obj\Debug\netcoreapp3.1\Big Project practice.dll
+C:\Users\domin\Documents\Git\obj\Debug\netcoreapp3.1\Big Project practice.pdb
