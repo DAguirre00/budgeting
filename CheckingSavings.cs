@@ -6,7 +6,7 @@ namespace Big_Project_practice
 {
     class CheckingSavings
     {
-        double savings, checking, amount, transferAmount;
+        double savings, checking, amount, transferAmount,test2;
         char account;
         bool transferToo;
 
@@ -46,13 +46,13 @@ namespace Big_Project_practice
 				//cout << "Enter a proper account." << endl;
 			}
 		}
-        public void Deposit(double savings, double checking, double amount)
+        public void Deposit(double savings, double checking, double amount, string DepositBox)
         {
-			if (account == 's')
+			if (DepositBox.Contains("Savings"))
 			{
 				savings = + amount;
 			}
-			else if (account == 'c')
+			else if (DepositBox.Contains("Checking"))
 			{
 				checking = + amount;
 			}

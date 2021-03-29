@@ -57,19 +57,25 @@ namespace Big_Project_practice
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Transferbutton = new System.Windows.Forms.Button();
+            this.TransferBox = new System.Windows.Forms.ComboBox();
+            this.TrasnferText = new System.Windows.Forms.TextBox();
+            this.Transfer = new System.Windows.Forms.Label();
+            this.WithdrawButton = new System.Windows.Forms.Button();
+            this.DepositButton = new System.Windows.Forms.Button();
+            this.WithdrawBox = new System.Windows.Forms.ComboBox();
+            this.DepositBox = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.Withdraw = new System.Windows.Forms.Label();
+            this.Deposit = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.DepositText = new System.Windows.Forms.TextBox();
+            this.WithdrawText = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Time_Calc_Button = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
@@ -384,7 +390,7 @@ namespace Big_Project_practice
             this.tabPage1.Controls.Add(this.Cost_Trans_Const);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(768, 378);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Budgeting";
@@ -392,52 +398,120 @@ namespace Big_Project_practice
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.comboBox2);
-            this.tabPage2.Controls.Add(this.comboBox1);
+            this.tabPage2.Controls.Add(this.Transferbutton);
+            this.tabPage2.Controls.Add(this.TransferBox);
+            this.tabPage2.Controls.Add(this.TrasnferText);
+            this.tabPage2.Controls.Add(this.Transfer);
+            this.tabPage2.Controls.Add(this.WithdrawButton);
+            this.tabPage2.Controls.Add(this.DepositButton);
+            this.tabPage2.Controls.Add(this.WithdrawBox);
+            this.tabPage2.Controls.Add(this.DepositBox);
             this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Controls.Add(this.label14);
-            this.tabPage2.Controls.Add(this.label13);
-            this.tabPage2.Controls.Add(this.label12);
+            this.tabPage2.Controls.Add(this.Withdraw);
+            this.tabPage2.Controls.Add(this.Deposit);
             this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.textBox6);
             this.tabPage2.Controls.Add(this.textBox5);
             this.tabPage2.Controls.Add(this.textBox4);
-            this.tabPage2.Controls.Add(this.textBox3);
-            this.tabPage2.Controls.Add(this.textBox2);
+            this.tabPage2.Controls.Add(this.DepositText);
+            this.tabPage2.Controls.Add(this.WithdrawText);
             this.tabPage2.Controls.Add(this.textBox1);
             this.tabPage2.Controls.Add(this.Time_Calc_Button);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(768, 378);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Checkings and Savings";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // comboBox2
+            // Transferbutton
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] { "Savings", "Checking",});
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(526, 160);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(133, 23);
-            this.comboBox2.TabIndex = 40;
+            this.Transferbutton.Location = new System.Drawing.Point(385, 86);
+            this.Transferbutton.Name = "Transferbutton";
+            this.Transferbutton.Size = new System.Drawing.Size(75, 23);
+            this.Transferbutton.TabIndex = 46;
+            this.Transferbutton.Text = "Transfer";
+            this.Transferbutton.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // TransferBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] { "Savings", "Checking", });
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(188, 160);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(133, 23);
-            this.comboBox1.TabIndex = 39;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.TransferBox.FormattingEnabled = true;
+            this.TransferBox.Items.AddRange(new object[] {
+            "From Savings To Checking",
+            "From Checking To Savings"});
+            this.TransferBox.Location = new System.Drawing.Point(527, 58);
+            this.TransferBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TransferBox.Name = "TransferBox";
+            this.TransferBox.Size = new System.Drawing.Size(133, 23);
+            this.TransferBox.TabIndex = 45;
+            this.TransferBox.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            // 
+            // TrasnferText
+            // 
+            this.TrasnferText.Location = new System.Drawing.Point(385, 58);
+            this.TrasnferText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TrasnferText.Name = "TrasnferText";
+            this.TrasnferText.Size = new System.Drawing.Size(136, 23);
+            this.TrasnferText.TabIndex = 44;
+            // 
+            // Transfer
+            // 
+            this.Transfer.AutoSize = true;
+            this.Transfer.Location = new System.Drawing.Point(385, 35);
+            this.Transfer.Name = "Transfer";
+            this.Transfer.Size = new System.Drawing.Size(48, 15);
+            this.Transfer.TabIndex = 43;
+            this.Transfer.Text = "Transfer";
+            this.Transfer.Click += new System.EventHandler(this.label16_Click);
+            // 
+            // WithdrawButton
+            // 
+            this.WithdrawButton.Location = new System.Drawing.Point(385, 189);
+            this.WithdrawButton.Name = "WithdrawButton";
+            this.WithdrawButton.Size = new System.Drawing.Size(75, 23);
+            this.WithdrawButton.TabIndex = 42;
+            this.WithdrawButton.Text = "Withdraw";
+            this.WithdrawButton.UseVisualStyleBackColor = true;
+            // 
+            // DepositButton
+            // 
+            this.DepositButton.Location = new System.Drawing.Point(46, 189);
+            this.DepositButton.Name = "DepositButton";
+            this.DepositButton.Size = new System.Drawing.Size(75, 23);
+            this.DepositButton.TabIndex = 41;
+            this.DepositButton.Text = "Deposit";
+            this.DepositButton.UseVisualStyleBackColor = true;
+            this.DepositButton.Click += new System.EventHandler(this.DepositButton_Click);
+            // 
+            // WithdrawBox
+            // 
+            this.WithdrawBox.FormattingEnabled = true;
+            this.WithdrawBox.Items.AddRange(new object[] {
+            "Savings",
+            "Checking"});
+            this.WithdrawBox.Location = new System.Drawing.Point(526, 160);
+            this.WithdrawBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.WithdrawBox.Name = "WithdrawBox";
+            this.WithdrawBox.Size = new System.Drawing.Size(133, 23);
+            this.WithdrawBox.TabIndex = 40;
+            // 
+            // DepositBox
+            // 
+            this.DepositBox.FormattingEnabled = true;
+            this.DepositBox.Items.AddRange(new object[] {
+            "Savings",
+            "Checking"});
+            this.DepositBox.Location = new System.Drawing.Point(191, 160);
+            this.DepositBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DepositBox.Name = "DepositBox";
+            this.DepositBox.Size = new System.Drawing.Size(133, 23);
+            this.DepositBox.TabIndex = 39;
+            this.DepositBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label15
             // 
@@ -457,29 +531,29 @@ namespace Big_Project_practice
             this.label14.TabIndex = 37;
             this.label14.Text = "Amount You Want To Save";
             // 
-            // label13
+            // Withdraw
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(385, 137);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(58, 15);
-            this.label13.TabIndex = 36;
-            this.label13.Text = "Withdraw";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.Withdraw.AutoSize = true;
+            this.Withdraw.Location = new System.Drawing.Point(385, 137);
+            this.Withdraw.Name = "Withdraw";
+            this.Withdraw.Size = new System.Drawing.Size(58, 15);
+            this.Withdraw.TabIndex = 36;
+            this.Withdraw.Text = "Withdraw";
+            this.Withdraw.Click += new System.EventHandler(this.label13_Click);
             // 
-            // label12
+            // Deposit
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(46, 137);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(47, 15);
-            this.label12.TabIndex = 35;
-            this.label12.Text = "Deposit";
+            this.Deposit.AutoSize = true;
+            this.Deposit.Location = new System.Drawing.Point(46, 137);
+            this.Deposit.Name = "Deposit";
+            this.Deposit.Size = new System.Drawing.Size(47, 15);
+            this.Deposit.TabIndex = 35;
+            this.Deposit.Text = "Deposit";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(385, 35);
+            this.label10.Location = new System.Drawing.Point(188, 35);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(95, 15);
             this.label10.TabIndex = 34;
@@ -514,27 +588,27 @@ namespace Big_Project_practice
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(385, 58);
+            this.textBox4.Location = new System.Drawing.Point(188, 58);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(136, 23);
             this.textBox4.TabIndex = 30;
             // 
-            // textBox3
+            // DepositText
             // 
-            this.textBox3.Location = new System.Drawing.Point(46, 160);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(136, 23);
-            this.textBox3.TabIndex = 29;
+            this.DepositText.Location = new System.Drawing.Point(46, 160);
+            this.DepositText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DepositText.Name = "DepositText";
+            this.DepositText.Size = new System.Drawing.Size(136, 23);
+            this.DepositText.TabIndex = 29;
             // 
-            // textBox2
+            // WithdrawText
             // 
-            this.textBox2.Location = new System.Drawing.Point(385, 160);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 23);
-            this.textBox2.TabIndex = 28;
+            this.WithdrawText.Location = new System.Drawing.Point(385, 160);
+            this.WithdrawText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.WithdrawText.Name = "WithdrawText";
+            this.WithdrawText.Size = new System.Drawing.Size(136, 23);
+            this.WithdrawText.TabIndex = 28;
             // 
             // textBox1
             // 
@@ -546,7 +620,7 @@ namespace Big_Project_practice
             // 
             // Time_Calc_Button
             // 
-            this.Time_Calc_Button.Location = new System.Drawing.Point(654, 343);
+            this.Time_Calc_Button.Location = new System.Drawing.Point(385, 293);
             this.Time_Calc_Button.Name = "Time_Calc_Button";
             this.Time_Calc_Button.Size = new System.Drawing.Size(75, 23);
             this.Time_Calc_Button.TabIndex = 26;
@@ -606,16 +680,23 @@ namespace Big_Project_practice
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox DepositText;
+        private System.Windows.Forms.TextBox WithdrawText;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label Withdraw;
+        private System.Windows.Forms.Label Deposit;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox DepositBox;
+        private System.Windows.Forms.ComboBox WithdrawBox;
+        private System.Windows.Forms.ComboBox TransferBox;
+        private System.Windows.Forms.TextBox TrasnferText;
+        private System.Windows.Forms.Label Transfer;
+        private System.Windows.Forms.Button WithdrawButton;
+        private System.Windows.Forms.Button DepositButton;
+        private System.Windows.Forms.Button Transferbutton;
+        private System.Windows.Forms.Label oith;
     }
 }
 
