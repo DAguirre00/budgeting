@@ -74,8 +74,14 @@ namespace Big_Project_practice
 
         private void DepositButton_Click(object sender, EventArgs e)
         {
-            CheckingSavings D = new CheckingSavings();
-            D.Deposit
+            if (DepositBox.Text == "" && DepositText.Text == "")
+            {
+                MessageBox.Show("Please select an account and amount.");
+            }
+            else
+            {
+                CheckingSavings.amount = DepositText.Text;
+            }
         }
     }
 }
