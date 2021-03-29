@@ -37,3 +37,4 @@ D:\GitRep\budget\bin\Debug\netcoreapp3.1\Big Project practice.runtimeconfig.dev.
 D:\GitRep\budget\bin\Debug\netcoreapp3.1\Big Project practice.dll
 D:\GitRep\budget\bin\Debug\netcoreapp3.1\Big Project practice.pdb
 D:\GitRep\budget\obj\Debug\netcoreapp3.1\Big Project practice.genruntimeconfig.cache
+d:\gitrep\budget\obj\Debug\netcoreapp3.1\Big Project practice.csprojAssemblyReference.cache
