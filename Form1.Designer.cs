@@ -486,6 +486,7 @@ namespace Big_Project_practice
             this.DepositButton.TabIndex = 41;
             this.DepositButton.Text = "Deposit";
             this.DepositButton.UseVisualStyleBackColor = true;
+            this.DepositButton.Click += new System.EventHandler(this.DepositButton_Click);
             // 
             // WithdrawBox
             // 
@@ -505,7 +506,7 @@ namespace Big_Project_practice
             this.DepositBox.Items.AddRange(new object[] {
             "Savings",
             "Checking"});
-            this.DepositBox.Location = new System.Drawing.Point(188, 160);
+            this.DepositBox.Location = new System.Drawing.Point(191, 160);
             this.DepositBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DepositBox.Name = "DepositBox";
             this.DepositBox.Size = new System.Drawing.Size(133, 23);
