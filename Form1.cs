@@ -71,5 +71,11 @@ namespace Big_Project_practice
         {
 
         }
+
+        private void DepositButton_Click(object sender, EventArgs e)
+        {
+            CheckingSavings D = new CheckingSavings();
+            D.Deposit
+        }
     }
 }
