@@ -6,8 +6,8 @@ namespace Big_Project_practice
 {
     class CheckingSavings
     {
-        double savings, checking, amount, transferAmount;
-        char account, testing;
+        double savings, checking, amount, transferAmount,test2;
+        char account;
         bool transferToo;
 
         public void withdraw(double savings, double checking, double amount)
