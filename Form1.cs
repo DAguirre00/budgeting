@@ -81,7 +81,9 @@ namespace Big_Project_practice
             else
             {
                 CheckingSavings D = new CheckingSavings();
-                CheckingSavings.Amount = DepositText.Text;
+                D.Amount = DepositText.Text;
+                D.Account = DepositBox.Text;
+                int Checking =+ D.Deposit;
 
             }
         }
