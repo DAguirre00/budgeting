@@ -12,9 +12,15 @@ namespace Big_Project_practice
 {
     public partial class Form1 : Form
     {
+        public double Savings { get; private set; }
+
+        public double Checking { get; private set; }
+
         public Form1()
         {
             InitializeComponent();
+            CheckingTotal.Text = "0";
+            SavingsTotal.Text = "0";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -74,7 +80,7 @@ namespace Big_Project_practice
 
         private void DepositButton_Click(object sender, EventArgs e)
         {
-            if (DepositBox.Text == "" && DepositText.Text == "")
+            if (DepositBox.Text == "" || DepositText.Text == "")
             {
                 MessageBox.Show("Please select an account and amount.");
             }
@@ -83,8 +89,21 @@ namespace Big_Project_practice
                 CheckingSavings D = new CheckingSavings();
                 D.Amount = DepositText.Text;
                 D.Account = DepositBox.Text;
-                int Checking =+ D.Deposit;
+                D.CTotal = CheckingTotal.Text;
+                D.STotal = SavingsTotal.Text;
 
+                if (DepositBox.Text == "Savings")
+                {
+                    SavingsTotal.Text = D.Deposit();
+                }
+                else if (DepositBox.Text == "Checking")
+                {
+                    CheckingTotal.Text = D.Deposit();
+                }
+                else
+                {
+                    MessageBox.Show("ERROR");
+                }
             }
         }
     }
