@@ -6,11 +6,25 @@ namespace Big_Project_practice
 {
     class CheckingSavings
     {
-        double savings, checking, amount, transferAmount,test2;
-        char account;
+        double savings, checking, transferAmount,test2;
+		
         bool transferToo;
 
-        public void withdraw(double savings, double checking, double amount)
+		private string amount;
+		public string Amount
+		{ 
+		get { return amount; }
+		set { amount = value;}
+		}
+
+		private string account;
+		public string Account
+		{
+			get { return account; }
+			set { account = value; }
+		}
+
+		public void withdraw(double savings, double checking, double amount)
         {
 			if (account == 's')
 			{
@@ -46,19 +60,17 @@ namespace Big_Project_practice
 				//cout << "Enter a proper account." << endl;
 			}
 		}
-        public void Deposit(double savings, double checking, double amount, string DepositBox)
+        public void Deposit()
         {
-			if (DepositBox.Contains("Savings"))
+			int temp = Convert.ToInt32(Amount);
+
+			if (Account.Contains("Savings"))
 			{
-				savings = + amount;
+				savings =+ temp;
 			}
-			else if (DepositBox.Contains("Checking"))
+			else if (Account.Contains("Checking"))
 			{
-				checking = + amount;
-			}
-			else
-			{
-				//cout << "Enter a proper account." << endl;
+				checking =+ temp;
 			}
 			
 		}
