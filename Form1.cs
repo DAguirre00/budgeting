@@ -94,16 +94,70 @@ namespace Big_Project_practice
 
                 if (DepositBox.Text == "Savings")
                 {
-                    SavingsTotal.Text = D.Deposit();
+                    string temp = D.Deposit();
+                    if (temp != "Error")
+                    {
+                        SavingsTotal.Text = temp;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Enter a number into the box");
+                    }
                 }
                 else if (DepositBox.Text == "Checking")
                 {
-                    CheckingTotal.Text = D.Deposit();
+                    string temp = D.Deposit();
+                    if (temp != "Error")
+                    {
+                        CheckingTotal.Text = temp;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Enter a number into the box");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("ERROR");
+                    MessageBox.Show("Error");
                 }
+            }
+        }
+
+        private void WithdrawButton_Click(object sender, EventArgs e)
+        {
+            CheckingSavings D = new CheckingSavings();
+            D.Amount = WithdrawText.Text;
+            D.Account = WithdrawBox.Text;
+            D.CTotal = CheckingTotal.Text;
+            D.STotal = SavingsTotal.Text;
+
+            if (WithdrawBox.Text == "Savings")
+            {
+                string temp = D.Withdraw();
+                if (temp != "Error")
+                {
+                    SavingsTotal.Text = temp;
+                }
+                else
+                {
+                    MessageBox.Show("Enter a number into the box");
+                }
+            }
+            else if (WithdrawBox.Text == "Checking")
+            {
+                string temp = D.Withdraw();
+                if (temp != "Error")
+                {
+                    CheckingTotal.Text = temp;
+                }
+                else
+                {
+                    MessageBox.Show("Enter a number into the box");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Error");
             }
         }
     }

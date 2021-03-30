@@ -38,66 +38,96 @@ namespace Big_Project_practice
 			set { sTotal = value; }
 		}
 
-		//public void withdraw(double savings, double checking, double amount)
-		//      {
-		//	if (account == 's')
-		//	{
-		//		if (amount <= savings)
-		//		{
-		//			savings =- amount;
-		//		}
-		//		else
-		//		{
-		//			//cout << "You dont have enough money." << endl;
-		//		}
-		//	}
-		//	else if (account == 'c')
-		//	{
-		//		if (amount <= checking)
-		//		{
-		//			checking =- amount;
-		//		}
-		//		else if (amount <= (checking + savings))
-		//		{ // Overdraft protection
-		//			//cout << "Not enough money in checking trasfering from savings." << endl;
-		//			amount =- checking;
-		//			checking = 0;
-		//			savings =- amount;
-		//		}
-		//		else
-		//		{
-		//			//cout << "You dont have enough money." << endl;
-		//		}
-		//	}
-		//	else
-		//	{
-		//		//cout << "Enter a proper account." << endl;
-		//	}
-		//}
-		public string Deposit()
+        public string Withdraw()
         {
-			double tempAmount = Convert.ToDouble(Amount);
-			
-			
+			double tempAmount;
+			bool result1 = double.TryParse(Amount, out tempAmount);
+			if (result1)
+			{
 
-			if (Account.Contains("Savings"))
-			{
-				double tempSTotal = Convert.ToDouble(STotal);
-				tempSTotal += tempAmount;
-				return Convert.ToString(tempSTotal);
-				
+				if (Account.Contains("Savings"))
+				{
+					double tempSTotal;
+					bool result2 = double.TryParse(STotal, out tempSTotal);
+					if (result2)
+					{
+						tempSTotal -= tempAmount;
+						return Convert.ToString(tempSTotal);
+					}
+					else
+					{
+						return "Error";
+					}
+				}
+				else if (Account.Contains("Checking"))
+				{
+					double tempCTotal;
+					bool result3 = double.TryParse(CTotal, out tempCTotal);
+					if (result3)
+					{
+						tempCTotal -= tempAmount;
+						return Convert.ToString(tempCTotal);
+					}
+					else
+					{
+						return "Error";
+					}
+				}
+				else
+				{
+					return "Error";
+				}
 			}
-			else if (Account.Contains("Checking"))
+			else
 			{
-				double tempCTotal = Convert.ToDouble(CTotal);
-				tempCTotal += tempAmount;
-				return Convert.ToString(tempCTotal);
-			}
-            else
-            {
 				return "Error";
-            }
-			
+			}
+		}
+        public string Deposit()
+        {
+			double tempAmount;
+			bool result1 = double.TryParse(Amount, out tempAmount);
+			if (result1)
+			{
+				
+				if (Account.Contains("Savings"))
+				{
+					double tempSTotal;
+					bool result2 = double.TryParse(STotal, out tempSTotal) ;
+					if (result2)
+					{
+						tempSTotal += tempAmount;
+						return Convert.ToString(tempSTotal);
+					}
+					else
+					{
+						return "Error";
+					}
+				}
+				else if (Account.Contains("Checking"))
+				{
+					double tempCTotal;
+					bool result3 = double.TryParse(CTotal, out tempCTotal);
+					if (result3)
+					{
+						tempCTotal += tempAmount;
+						return Convert.ToString(tempCTotal);
+					}
+					else
+					{
+						return "Error";
+					}
+				}
+				else
+				{
+					return "Error";
+				}
+			}
+			else
+			{
+				return "Error";
+			}
+
 		}
   //      public void trasnfer(double savings, double checking,double transferAmount, bool trasnferToo)
   //      {
