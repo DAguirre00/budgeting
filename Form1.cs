@@ -80,7 +80,9 @@ namespace Big_Project_practice
             }
             else
             {
-                CheckingSavings.amount = DepositText.Text;
+                CheckingSavings D = new CheckingSavings();
+                CheckingSavings.Amount = DepositText.Text;
+
             }
         }
     }
