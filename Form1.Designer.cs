@@ -59,7 +59,7 @@ namespace Big_Project_practice
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.Transferbutton = new System.Windows.Forms.Button();
             this.TransferBox = new System.Windows.Forms.ComboBox();
-            this.TrasnferText = new System.Windows.Forms.TextBox();
+            this.TransferText = new System.Windows.Forms.TextBox();
             this.Transfer = new System.Windows.Forms.Label();
             this.WithdrawButton = new System.Windows.Forms.Button();
             this.DepositButton = new System.Windows.Forms.Button();
@@ -400,7 +400,7 @@ namespace Big_Project_practice
             // 
             this.tabPage2.Controls.Add(this.Transferbutton);
             this.tabPage2.Controls.Add(this.TransferBox);
-            this.tabPage2.Controls.Add(this.TrasnferText);
+            this.tabPage2.Controls.Add(this.TransferText);
             this.tabPage2.Controls.Add(this.Transfer);
             this.tabPage2.Controls.Add(this.WithdrawButton);
             this.tabPage2.Controls.Add(this.DepositButton);
@@ -437,6 +437,7 @@ namespace Big_Project_practice
             this.Transferbutton.TabIndex = 46;
             this.Transferbutton.Text = "Transfer";
             this.Transferbutton.UseVisualStyleBackColor = true;
+            this.Transferbutton.Click += new System.EventHandler(this.Transferbutton_Click);
             // 
             // TransferBox
             // 
@@ -451,13 +452,13 @@ namespace Big_Project_practice
             this.TransferBox.TabIndex = 45;
             this.TransferBox.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
-            // TrasnferText
+            // TransferText
             // 
-            this.TrasnferText.Location = new System.Drawing.Point(385, 58);
-            this.TrasnferText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TrasnferText.Name = "TrasnferText";
-            this.TrasnferText.Size = new System.Drawing.Size(136, 23);
-            this.TrasnferText.TabIndex = 44;
+            this.TransferText.Location = new System.Drawing.Point(385, 58);
+            this.TransferText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TransferText.Name = "TransferText";
+            this.TransferText.Size = new System.Drawing.Size(136, 23);
+            this.TransferText.TabIndex = 44;
             // 
             // Transfer
             // 
@@ -694,7 +695,7 @@ namespace Big_Project_practice
         private System.Windows.Forms.ComboBox DepositBox;
         private System.Windows.Forms.ComboBox WithdrawBox;
         private System.Windows.Forms.ComboBox TransferBox;
-        private System.Windows.Forms.TextBox TrasnferText;
+        private System.Windows.Forms.TextBox TransferText;
         private System.Windows.Forms.Label Transfer;
         private System.Windows.Forms.Button WithdrawButton;
         private System.Windows.Forms.Button DepositButton;

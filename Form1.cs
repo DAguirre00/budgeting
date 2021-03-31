@@ -86,15 +86,15 @@ namespace Big_Project_practice
             }
             else
             {
-                CheckingSavings D = new CheckingSavings();
-                D.Amount = DepositText.Text;
-                D.Account = DepositBox.Text;
-                D.CTotal = CheckingTotal.Text;
-                D.STotal = SavingsTotal.Text;
+                CheckingSavings CheckingSavings = new CheckingSavings();
+                CheckingSavings.Amount = DepositText.Text;
+                CheckingSavings.Account = DepositBox.Text;
+                CheckingSavings.CTotal = CheckingTotal.Text;
+                CheckingSavings.STotal = SavingsTotal.Text;
 
                 if (DepositBox.Text == "Savings")
                 {
-                    string temp = D.Deposit();
+                    string temp = CheckingSavings.Deposit();
                     if (temp != "Error")
                     {
                         SavingsTotal.Text = temp;
@@ -106,7 +106,7 @@ namespace Big_Project_practice
                 }
                 else if (DepositBox.Text == "Checking")
                 {
-                    string temp = D.Deposit();
+                    string temp = CheckingSavings.Deposit();
                     if (temp != "Error")
                     {
                         CheckingTotal.Text = temp;
@@ -125,39 +125,73 @@ namespace Big_Project_practice
 
         private void WithdrawButton_Click(object sender, EventArgs e)
         {
-            CheckingSavings D = new CheckingSavings();
-            D.Amount = WithdrawText.Text;
-            D.Account = WithdrawBox.Text;
-            D.CTotal = CheckingTotal.Text;
-            D.STotal = SavingsTotal.Text;
+            CheckingSavings CheckingSavings = new CheckingSavings();
+            CheckingSavings.Amount = WithdrawText.Text;
+            CheckingSavings.Account = WithdrawBox.Text;
+            CheckingSavings.CTotal = CheckingTotal.Text;
+            CheckingSavings.STotal = SavingsTotal.Text;
 
-            if (WithdrawBox.Text == "Savings")
+            if (WithdrawBox.Text == "" || WithdrawText.Text == "")
             {
-                string temp = D.Withdraw();
-                if (temp != "Error")
-                {
-                    SavingsTotal.Text = temp;
-                }
-                else
-                {
-                    MessageBox.Show("Enter a number into the box");
-                }
-            }
-            else if (WithdrawBox.Text == "Checking")
-            {
-                string temp = D.Withdraw();
-                if (temp != "Error")
-                {
-                    CheckingTotal.Text = temp;
-                }
-                else
-                {
-                    MessageBox.Show("Enter a number into the box");
-                }
+                MessageBox.Show("Please select an account and amount.");
             }
             else
             {
-                MessageBox.Show("Error");
+                if (WithdrawBox.Text == "Savings")
+                {
+                    string temp = CheckingSavings.Withdraw();
+                    if (temp != "Error")
+                    {
+                        SavingsTotal.Text = temp;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Enter a number into the box");
+                    }
+                }
+                else if (WithdrawBox.Text == "Checking")
+                {
+                    string temp = CheckingSavings.Withdraw();
+                    if (temp != "Error")
+                    {
+                        CheckingTotal.Text = temp;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Enter a number into the box");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Error");
+                }
+            }
+        }
+
+        private void Transferbutton_Click(object sender, EventArgs e)
+        {
+            CheckingSavings CheckingSavings = new CheckingSavings();
+            CheckingSavings.Amount = TransferText.Text;
+            CheckingSavings.Account = TransferBox.Text;
+            CheckingSavings.CTotal = CheckingTotal.Text;
+            CheckingSavings.STotal = SavingsTotal.Text;
+
+            if (TransferBox.Text == "" || TransferText.Text == "")
+            {
+                MessageBox.Show("Please select how you want to transfer.");
+            }
+            else
+            {
+                string[] temp = CheckingSavings.Transfer();
+                if (temp[1] == "Error")
+                {
+                    MessageBox.Show("Error");
+                }
+                else
+                {
+                    CheckingTotal.Text = temp[0];
+                    SavingsTotal.Text = temp[2];
+                }
             }
         }
     }
