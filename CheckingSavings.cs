@@ -4,99 +4,172 @@ using System.Text;
 
 namespace Big_Project_practice
 {
-    class CheckingSavings
-    {
-        double savings, checking, amount, transferAmount,test2;
-        char account;
-        bool transferToo;
+	class CheckingSavings
+	{
+		double savings, checking, transferAmount;
 
-        public void withdraw(double savings, double checking, double amount)
-        {
-			if (account == 's')
+		bool transferToo;
+
+		private string amount;
+		public string Amount
+		{
+			get { return amount; }
+			set { amount = value; }
+		}
+
+		private string account;
+		public string Account
+		{
+			get { return account; }
+			set { account = value; }
+		}
+
+		private string cTotal;
+		public string CTotal
+		{
+			get { return cTotal; }
+			set { cTotal = value; }
+		}
+
+		private string sTotal;
+		public string STotal
+		{
+			get { return sTotal; }
+			set { sTotal = value; }
+		}
+
+		public string Withdraw()
+		{
+			double tempAmount;
+			bool result1 = double.TryParse(Amount, out tempAmount);
+			if (result1)
 			{
-				if (amount <= savings)
+
+				if (Account.Contains("Savings"))
 				{
-					savings =- amount;
+					double tempSTotal;
+					bool result2 = double.TryParse(STotal, out tempSTotal);
+					if (result2)
+					{
+						tempSTotal -= tempAmount;
+						return Convert.ToString(tempSTotal);
+					}
+					else
+					{
+						return "Error";
+					}
+				}
+				else if (Account.Contains("Checking"))
+				{
+					double tempCTotal;
+					bool result3 = double.TryParse(CTotal, out tempCTotal);
+					if (result3)
+					{
+						tempCTotal -= tempAmount;
+						return Convert.ToString(tempCTotal);
+					}
+					else
+					{
+						return "Error";
+					}
 				}
 				else
 				{
-					//cout << "You dont have enough money." << endl;
-				}
-			}
-			else if (account == 'c')
-			{
-				if (amount <= checking)
-				{
-					checking =- amount;
-				}
-				else if (amount <= (checking + savings))
-				{ // Overdraft protection
-					//cout << "Not enough money in checking trasfering from savings." << endl;
-					amount =- checking;
-					checking = 0;
-					savings =- amount;
-				}
-				else
-				{
-					//cout << "You dont have enough money." << endl;
+					return "Error";
 				}
 			}
 			else
 			{
-				//cout << "Enter a proper account." << endl;
+				return "Error";
 			}
 		}
-        public void Deposit(double savings, double checking, double amount, string DepositBox)
-        {
-			if (DepositBox.Contains("Savings"))
+		public string Deposit()
+		{
+			double tempAmount;
+			bool result1 = double.TryParse(Amount, out tempAmount);
+			if (result1)
 			{
-				savings = + amount;
-			}
-			else if (DepositBox.Contains("Checking"))
-			{
-				checking = + amount;
-			}
-			else
-			{
-				//cout << "Enter a proper account." << endl;
-			}
-			
-		}
-        public void trasnfer(double savings, double checking,double transferAmount, bool trasnferToo)
-        {
-			if (trasnferToo == true)
-			{
-				if (transferAmount <= savings)
+
+				if (Account.Contains("Savings"))
 				{
-					checking = checking + transferAmount;
-					savings = savings - transferAmount;
+					double tempSTotal;
+					bool result2 = double.TryParse(STotal, out tempSTotal);
+					if (result2)
+					{
+						tempSTotal += tempAmount;
+						return Convert.ToString(tempSTotal);
+					}
+					else
+					{
+						return "Error";
+					}
+				}
+				else if (Account.Contains("Checking"))
+				{
+					double tempCTotal;
+					bool result3 = double.TryParse(CTotal, out tempCTotal);
+					if (result3)
+					{
+						tempCTotal += tempAmount;
+						return Convert.ToString(tempCTotal);
+					}
+					else
+					{
+						return "Error";
+					}
 				}
 				else
 				{
-					//cout << "You dont have enough money" << endl;
-				}
-			}
-			else if (trasnferToo == false)
-			{
-				if (transferAmount <= checking)
-				{
-					checking = checking - transferAmount;
-					savings = savings + transferAmount;
-				}
-				else
-				{
-					//cout << "You dont have enough money." << endl;
+					return "Error";
 				}
 			}
 			else
 			{
-				// << "Enter a valid option." << endl;
+				return "Error";
+			}
+
+		}
+		public string[] Transfer()
+		{
+			double tempAmount;
+			double tempSTotal;
+			double tempCTotal;
+
+			bool result1 = double.TryParse(Amount, out tempAmount);
+			bool result2 = double.TryParse(STotal, out tempSTotal);
+			bool result3 = double.TryParse(CTotal, out tempCTotal);
+
+			if (result1 && result2)
+			{
+				if (Account.Contains("From Savings To Checking"))
+				{
+					tempSTotal -= tempAmount;
+					tempCTotal += tempAmount;
+
+					string tempString1 = Convert.ToString(tempCTotal);
+					string tempString2 = Convert.ToString(tempSTotal);
+
+					return new string[] { tempString1, tempString2 };
+				}
+				else if (Account.Contains("From Checking To Savings"))
+				{
+					tempSTotal += tempAmount;
+					tempCTotal -= tempAmount;
+
+					string tempString1 = Convert.ToString(tempCTotal);
+					string tempString2 = Convert.ToString(tempSTotal);
+
+					return new string[] { tempString1, tempString2 };
+				}
+				else
+				{
+					return new string[] { "Error" };
+				}
+			}
+			else
+			{
+				return new string[] { "Error" };
 			}
 		}
-        public void Check()
-        {
-
-        }
-
     }
 }

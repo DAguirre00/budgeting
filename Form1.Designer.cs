@@ -59,7 +59,7 @@ namespace Big_Project_practice
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.Transferbutton = new System.Windows.Forms.Button();
             this.TransferBox = new System.Windows.Forms.ComboBox();
-            this.TrasnferText = new System.Windows.Forms.TextBox();
+            this.TransferText = new System.Windows.Forms.TextBox();
             this.Transfer = new System.Windows.Forms.Label();
             this.WithdrawButton = new System.Windows.Forms.Button();
             this.DepositButton = new System.Windows.Forms.Button();
@@ -73,10 +73,10 @@ namespace Big_Project_practice
             this.label9 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.SavingsTotal = new System.Windows.Forms.TextBox();
             this.DepositText = new System.Windows.Forms.TextBox();
             this.WithdrawText = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CheckingTotal = new System.Windows.Forms.TextBox();
             this.Time_Calc_Button = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -400,7 +400,7 @@ namespace Big_Project_practice
             // 
             this.tabPage2.Controls.Add(this.Transferbutton);
             this.tabPage2.Controls.Add(this.TransferBox);
-            this.tabPage2.Controls.Add(this.TrasnferText);
+            this.tabPage2.Controls.Add(this.TransferText);
             this.tabPage2.Controls.Add(this.Transfer);
             this.tabPage2.Controls.Add(this.WithdrawButton);
             this.tabPage2.Controls.Add(this.DepositButton);
@@ -414,10 +414,10 @@ namespace Big_Project_practice
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.textBox6);
             this.tabPage2.Controls.Add(this.textBox5);
-            this.tabPage2.Controls.Add(this.textBox4);
+            this.tabPage2.Controls.Add(this.SavingsTotal);
             this.tabPage2.Controls.Add(this.DepositText);
             this.tabPage2.Controls.Add(this.WithdrawText);
-            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.CheckingTotal);
             this.tabPage2.Controls.Add(this.Time_Calc_Button);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
@@ -437,6 +437,7 @@ namespace Big_Project_practice
             this.Transferbutton.TabIndex = 46;
             this.Transferbutton.Text = "Transfer";
             this.Transferbutton.UseVisualStyleBackColor = true;
+            this.Transferbutton.Click += new System.EventHandler(this.Transferbutton_Click);
             // 
             // TransferBox
             // 
@@ -451,13 +452,13 @@ namespace Big_Project_practice
             this.TransferBox.TabIndex = 45;
             this.TransferBox.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
-            // TrasnferText
+            // TransferText
             // 
-            this.TrasnferText.Location = new System.Drawing.Point(385, 58);
-            this.TrasnferText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TrasnferText.Name = "TrasnferText";
-            this.TrasnferText.Size = new System.Drawing.Size(136, 23);
-            this.TrasnferText.TabIndex = 44;
+            this.TransferText.Location = new System.Drawing.Point(385, 58);
+            this.TransferText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TransferText.Name = "TransferText";
+            this.TransferText.Size = new System.Drawing.Size(136, 23);
+            this.TransferText.TabIndex = 44;
             // 
             // Transfer
             // 
@@ -477,6 +478,7 @@ namespace Big_Project_practice
             this.WithdrawButton.TabIndex = 42;
             this.WithdrawButton.Text = "Withdraw";
             this.WithdrawButton.UseVisualStyleBackColor = true;
+            this.WithdrawButton.Click += new System.EventHandler(this.WithdrawButton_Click);
             // 
             // DepositButton
             // 
@@ -586,13 +588,14 @@ namespace Big_Project_practice
             this.textBox5.TabIndex = 31;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-            // textBox4
+            // SavingsTotal
             // 
-            this.textBox4.Location = new System.Drawing.Point(188, 58);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(136, 23);
-            this.textBox4.TabIndex = 30;
+            this.SavingsTotal.Location = new System.Drawing.Point(188, 58);
+            this.SavingsTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SavingsTotal.Name = "SavingsTotal";
+            this.SavingsTotal.ReadOnly = true;
+            this.SavingsTotal.Size = new System.Drawing.Size(136, 23);
+            this.SavingsTotal.TabIndex = 30;
             // 
             // DepositText
             // 
@@ -610,13 +613,14 @@ namespace Big_Project_practice
             this.WithdrawText.Size = new System.Drawing.Size(136, 23);
             this.WithdrawText.TabIndex = 28;
             // 
-            // textBox1
+            // CheckingTotal
             // 
-            this.textBox1.Location = new System.Drawing.Point(46, 58);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 23);
-            this.textBox1.TabIndex = 27;
+            this.CheckingTotal.Location = new System.Drawing.Point(46, 58);
+            this.CheckingTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CheckingTotal.Name = "CheckingTotal";
+            this.CheckingTotal.ReadOnly = true;
+            this.CheckingTotal.Size = new System.Drawing.Size(136, 23);
+            this.CheckingTotal.TabIndex = 27;
             // 
             // Time_Calc_Button
             // 
@@ -679,10 +683,10 @@ namespace Big_Project_practice
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox SavingsTotal;
         private System.Windows.Forms.TextBox DepositText;
         private System.Windows.Forms.TextBox WithdrawText;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox CheckingTotal;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label Withdraw;
@@ -691,7 +695,7 @@ namespace Big_Project_practice
         private System.Windows.Forms.ComboBox DepositBox;
         private System.Windows.Forms.ComboBox WithdrawBox;
         private System.Windows.Forms.ComboBox TransferBox;
-        private System.Windows.Forms.TextBox TrasnferText;
+        private System.Windows.Forms.TextBox TransferText;
         private System.Windows.Forms.Label Transfer;
         private System.Windows.Forms.Button WithdrawButton;
         private System.Windows.Forms.Button DepositButton;
