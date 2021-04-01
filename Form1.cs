@@ -35,7 +35,11 @@ namespace Big_Project_practice
 
         private void Calculate_Button_Click(object sender, EventArgs e)
         {
-
+            Budgeting test = new Budgeting();
+            double C_savings = test.Calculated_savings(Convert.ToDouble(Income_Text.Text), 0, Convert.ToDouble(Cost_Rent_Text.Text), Convert.ToDouble(Cost_Food_Text.Text), Convert.ToDouble(Cost_Trans_Text.Text));
+            Calc_Savings_Text.Text = Convert.ToString(C_savings);
+            
+            
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -193,6 +197,16 @@ namespace Big_Project_practice
                     SavingsTotal.Text = temp[2];
                 }
             }
+        }
+
+        private void Income_Text_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Time_Calc_Button_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
