@@ -26,7 +26,5 @@ namespace Big_Project_practice
             return time;
         }
 
-
-
     }
 }
