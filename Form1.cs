@@ -12,6 +12,7 @@ namespace Big_Project_practice
 {
     public partial class Form1 : Form
     {
+        public int counter = 0;
         public double Savings { get; private set; }
 
         public double Checking { get; private set; }
@@ -36,12 +37,25 @@ namespace Big_Project_practice
         private void Calculate_Button_Click(object sender, EventArgs e)
         {
             Budgeting test = new Budgeting();
-            double C_savings = test.Calculated_savings(Convert.ToDouble(Income_Text.Text), 0, Convert.ToDouble(Cost_Rent_Text.Text), Convert.ToDouble(Cost_Food_Text.Text), Convert.ToDouble(Cost_Trans_Text.Text));
+            if (ComboBoxState.Text.Contains("CT") && State_CheckBox.Checked)
+            {
+                Tax_Textbox.Text= State_Info.CT.tax_CT;
+                Cost_Rent_Text.Text = State_Info.CT.rent_CT;
+                Cost_Food_Text.Text = State_Info.CT.food_CT;
+                Cost_Trans_Text.Text = State_Info.CT.trans_CT;
+                Cost_Rent_Text.ReadOnly = false;
+                Cost_Food_Text.ReadOnly = false;
+                Cost_Trans_Text.ReadOnly = false;
+                Calc_Savings_Text.ReadOnly = false;
+            }
+            double C_savings = test.Calculated_savings(Convert.ToDouble(Income_Text.Text), Convert.ToDouble(Tax_Textbox.Text), Convert.ToDouble(Cost_Rent_Text.Text), Convert.ToDouble(Cost_Food_Text.Text), Convert.ToDouble(Cost_Trans_Text.Text));
             Calc_Savings_Text.Text = Convert.ToString(C_savings);
+            
+
             
             
         }
-
+        
         private void label9_Click(object sender, EventArgs e)
         {
 

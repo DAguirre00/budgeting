@@ -71,6 +71,7 @@ namespace Big_Project_practice
             this.WithdrawText = new System.Windows.Forms.TextBox();
             this.CheckingTotal = new System.Windows.Forms.TextBox();
             this.Time_Calc_Button = new System.Windows.Forms.Button();
+            this.State_CheckBox = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -131,6 +132,7 @@ namespace Big_Project_practice
             // 
             this.Cost_Rent_Text.Location = new System.Drawing.Point(28, 164);
             this.Cost_Rent_Text.Name = "Cost_Rent_Text";
+            this.Cost_Rent_Text.ReadOnly = true;
             this.Cost_Rent_Text.Size = new System.Drawing.Size(100, 23);
             this.Cost_Rent_Text.TabIndex = 5;
             // 
@@ -147,6 +149,7 @@ namespace Big_Project_practice
             // 
             this.Cost_Food_Text.Location = new System.Drawing.Point(276, 164);
             this.Cost_Food_Text.Name = "Cost_Food_Text";
+            this.Cost_Food_Text.ReadOnly = true;
             this.Cost_Food_Text.Size = new System.Drawing.Size(100, 23);
             this.Cost_Food_Text.TabIndex = 8;
             // 
@@ -163,6 +166,7 @@ namespace Big_Project_practice
             // 
             this.Cost_Trans_Text.Location = new System.Drawing.Point(515, 164);
             this.Cost_Trans_Text.Name = "Cost_Trans_Text";
+            this.Cost_Trans_Text.ReadOnly = true;
             this.Cost_Trans_Text.Size = new System.Drawing.Size(127, 23);
             this.Cost_Trans_Text.TabIndex = 11;
             // 
@@ -189,6 +193,7 @@ namespace Big_Project_practice
             this.Calc_Savings_Text.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Calc_Savings_Text.Location = new System.Drawing.Point(28, 287);
             this.Calc_Savings_Text.Name = "Calc_Savings_Text";
+            this.Calc_Savings_Text.ReadOnly = true;
             this.Calc_Savings_Text.Size = new System.Drawing.Size(100, 23);
             this.Calc_Savings_Text.TabIndex = 16;
             // 
@@ -250,6 +255,7 @@ namespace Big_Project_practice
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.State_CheckBox);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.Calculate_Button);
             this.tabPage1.Controls.Add(this.label11);
@@ -512,6 +518,18 @@ namespace Big_Project_practice
             this.Time_Calc_Button.UseVisualStyleBackColor = true;
             this.Time_Calc_Button.Click += new System.EventHandler(this.Time_Calc_Button_Click);
             // 
+            // State_CheckBox
+            // 
+            this.State_CheckBox.AutoSize = true;
+            this.State_CheckBox.Checked = true;
+            this.State_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.State_CheckBox.Location = new System.Drawing.Point(30, 97);
+            this.State_CheckBox.Name = "State_CheckBox";
+            this.State_CheckBox.Size = new System.Drawing.Size(325, 19);
+            this.State_CheckBox.TabIndex = 29;
+            this.State_CheckBox.Text = "Check box for inital calculation, or when changing states";
+            this.State_CheckBox.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -575,6 +593,7 @@ namespace Big_Project_practice
         private System.Windows.Forms.Button DepositButton;
         private System.Windows.Forms.Button Transferbutton;
         private System.Windows.Forms.Label oith;
+        private System.Windows.Forms.CheckBox State_CheckBox;
     }
 }
 
