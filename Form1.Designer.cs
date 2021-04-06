@@ -49,6 +49,7 @@ namespace Big_Project_practice
             this.label11 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.State_CheckBox = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.Transferbutton = new System.Windows.Forms.Button();
             this.TransferBox = new System.Windows.Forms.ComboBox();
@@ -71,7 +72,6 @@ namespace Big_Project_practice
             this.WithdrawText = new System.Windows.Forms.TextBox();
             this.CheckingTotal = new System.Windows.Forms.TextBox();
             this.Time_Calc_Button = new System.Windows.Forms.Button();
-            this.State_CheckBox = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -280,6 +280,19 @@ namespace Big_Project_practice
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Budgeting";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // State_CheckBox
+            // 
+            this.State_CheckBox.AutoSize = true;
+            this.State_CheckBox.Checked = true;
+            this.State_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.State_CheckBox.Location = new System.Drawing.Point(30, 97);
+            this.State_CheckBox.Name = "State_CheckBox";
+            this.State_CheckBox.Size = new System.Drawing.Size(417, 19);
+            this.State_CheckBox.TabIndex = 29;
+            this.State_CheckBox.Text = "Keep box checked for average state costs, unhceck for personal budgeting";
+            this.State_CheckBox.UseVisualStyleBackColor = true;
+            this.State_CheckBox.CheckedChanged += new System.EventHandler(this.State_CheckBox_CheckedChanged);
             // 
             // tabPage2
             // 
@@ -517,18 +530,6 @@ namespace Big_Project_practice
             this.Time_Calc_Button.Text = "Calculate";
             this.Time_Calc_Button.UseVisualStyleBackColor = true;
             this.Time_Calc_Button.Click += new System.EventHandler(this.Time_Calc_Button_Click);
-            // 
-            // State_CheckBox
-            // 
-            this.State_CheckBox.AutoSize = true;
-            this.State_CheckBox.Checked = true;
-            this.State_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.State_CheckBox.Location = new System.Drawing.Point(30, 97);
-            this.State_CheckBox.Name = "State_CheckBox";
-            this.State_CheckBox.Size = new System.Drawing.Size(325, 19);
-            this.State_CheckBox.TabIndex = 29;
-            this.State_CheckBox.Text = "Check box for inital calculation, or when changing states";
-            this.State_CheckBox.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
