@@ -100,9 +100,9 @@ namespace Big_Project_practice
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(30, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 15);
+            this.label1.Size = new System.Drawing.Size(114, 15);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Enter Income:";
+            this.label1.Text = "Enter Yearly Income:";
             // 
             // ComboBoxState
             // 
@@ -184,9 +184,9 @@ namespace Big_Project_practice
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(28, 268);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 15);
+            this.label6.Size = new System.Drawing.Size(143, 15);
             this.label6.TabIndex = 15;
-            this.label6.Text = "Calculated Savings:";
+            this.label6.Text = "Calculated Yearly Savings:";
             // 
             // Calc_Savings_Text
             // 
