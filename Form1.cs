@@ -37,11 +37,13 @@ namespace Big_Project_practice
         private void Calculate_Button_Click(object sender, EventArgs e)
         {
             Budgeting test = new Budgeting();
+            State_Info test_also = new State_Info();
+
             if (State_CheckBox.Checked == true) {
             
                 if (ComboBoxState.Text.Contains("CT"))
                 {
-                    Tax_Textbox.Text = State_Info.CT.tax_CT;
+                    Tax_Textbox.Text = test_also.CT_tax(Income_Text.Text);
                     Cost_Rent_Text.Text = State_Info.CT.rent_CT;
                     Cost_Food_Text.Text = State_Info.CT.food_CT;
                     Cost_Trans_Text.Text = State_Info.CT.trans_CT;
@@ -49,7 +51,7 @@ namespace Big_Project_practice
 
                 if (ComboBoxState.Text.Contains("ME"))
                 {
-                    Tax_Textbox.Text = State_Info.ME.tax_ME;
+                    Tax_Textbox.Text = test_also.ME_tax(Income_Text.Text);
                     Cost_Rent_Text.Text = State_Info.ME.rent_ME;
                     Cost_Food_Text.Text = State_Info.ME.food_ME;
                     Cost_Trans_Text.Text = State_Info.ME.trans_ME;
@@ -57,7 +59,7 @@ namespace Big_Project_practice
 
                 if (ComboBoxState.Text.Contains("MA"))
                 {
-                    Tax_Textbox.Text = State_Info.MA.tax_MA;
+                    Tax_Textbox.Text = test_also.MA_tax(Income_Text.Text);
                     Cost_Rent_Text.Text = State_Info.MA.rent_MA;
                     Cost_Food_Text.Text = State_Info.MA.food_MA;
                     Cost_Trans_Text.Text = State_Info.MA.trans_MA;
@@ -69,39 +71,51 @@ namespace Big_Project_practice
                     Cost_Rent_Text.Text = State_Info.NH.rent_NH;
                     Cost_Food_Text.Text = State_Info.NH.food_NH;
                     Cost_Trans_Text.Text = State_Info.NH.trans_NH;
-                    /*Cost_Rent_Text.ReadOnly = false;
-                    Cost_Food_Text.ReadOnly = false;
-                    Cost_Trans_Text.ReadOnly = false;
-                    Calc_Savings_Text.ReadOnly = false;*/
                 }
 
                 if (ComboBoxState.Text.Contains("RI"))
                 {
-                    Tax_Textbox.Text = State_Info.RI.tax_RI;
+                    Tax_Textbox.Text = test_also.RI_tax(Income_Text.Text);
                     Cost_Rent_Text.Text = State_Info.RI.rent_RI;
                     Cost_Food_Text.Text = State_Info.RI.food_RI;
                     Cost_Trans_Text.Text = State_Info.RI.trans_RI;
-                    /*Cost_Rent_Text.ReadOnly = false;
-                    Cost_Food_Text.ReadOnly = false;
-                    Cost_Trans_Text.ReadOnly = false;
-                    Calc_Savings_Text.ReadOnly = false;*/
                 }
 
                 if (ComboBoxState.Text.Contains("VT"))
                 {
-                    Tax_Textbox.Text = State_Info.VT.tax_VT;
+                    Tax_Textbox.Text = test_also.VT_tax(Income_Text.Text);
                     Cost_Rent_Text.Text = State_Info.VT.rent_VT;
                     Cost_Food_Text.Text = State_Info.VT.food_VT;
                     Cost_Trans_Text.Text = State_Info.VT.trans_VT;
                    
                 }
 
+                if (ComboBoxState.Text == "")
+                {
+                    MessageBox.Show("Please Enter State or uncheck box.");
+                }
+
+            }
+            
+            if (Income_Text.Text == "" | Tax_Textbox.Text == "" | Cost_Rent_Text.Text == "" | Cost_Food_Text.Text == "" | Cost_Trans_Text.Text == "")
+            {
+                MessageBox.Show("Please enter any blank fields.");
             }
 
-            double C_savings = test.Calculated_savings(Convert.ToDouble(Income_Text.Text), Convert.ToDouble(Tax_Textbox.Text), Convert.ToDouble(Cost_Rent_Text.Text), Convert.ToDouble(Cost_Food_Text.Text), Convert.ToDouble(Cost_Trans_Text.Text));
-            Calc_Savings_Text.Text = Convert.ToString(C_savings);
-            
-            
+            else
+            {
+                if (CheckNum(Income_Text.Text) == true && CheckNum(Tax_Textbox.Text) == true && CheckNum(Cost_Rent_Text.Text) == true && CheckNum(Cost_Food_Text.Text) == true && CheckNum(Cost_Trans_Text.Text))
+                {
+                    double C_savings = test.Calculated_savings(Convert.ToDouble(Income_Text.Text), Convert.ToDouble(Tax_Textbox.Text), Convert.ToDouble(Cost_Rent_Text.Text), Convert.ToDouble(Cost_Food_Text.Text), Convert.ToDouble(Cost_Trans_Text.Text));
+                    Calc_Savings_Text.Text = Convert.ToString(C_savings);
+                    calc_savings_box_2.Text = Convert.ToString(C_savings);
+                }
+
+                else
+                {
+                    MessageBox.Show("Please Check to see if entered values are correct.");
+                }
+            }
         }
         
         private void label9_Click(object sender, EventArgs e)
@@ -268,7 +282,8 @@ namespace Big_Project_practice
 
         private void Time_Calc_Button_Click(object sender, EventArgs e)
         {
-
+            Budgeting test_too = new Budgeting();
+            time_textbox.Text = test_too.Time_To_Save(Convert.ToDouble(calc_savings_box_2.Text), Convert.ToDouble(SavingsTotal.Text), Convert.ToDouble(cost_textbox.Text));
         }
 
         private void State_CheckBox_CheckedChanged(object sender, EventArgs e)
@@ -279,7 +294,6 @@ namespace Big_Project_practice
                 Cost_Rent_Text.ReadOnly = false;
                 Cost_Food_Text.ReadOnly = false;
                 Cost_Trans_Text.ReadOnly = false;
-                Calc_Savings_Text.ReadOnly = false;
             }
 
             if (State_CheckBox.Checked == true)
@@ -292,5 +306,35 @@ namespace Big_Project_practice
             }
 
         }
+
+        bool CheckString(string str)//Deciphers if the string has a period in it, meaning its a double and not an int
+        {
+            for (int k = (str.Length - 1); k > 0; k--) // -1 for the null character
+            {
+                if (str[k] == 46) // Checking ASCII code for "."
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        bool CheckNum(string str)
+        {
+            for (int l = 0; l < str.Length; l++) // -1 for the null character
+            {
+                if ((str[l] >= 48 && str[l] <= 57) | str[l] == 46) // Checking ASCII code for numbers
+                {
+
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+
     }
 }

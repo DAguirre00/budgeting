@@ -16,14 +16,14 @@ namespace Big_Project_practice
             return calc_savings;
         }
 
-        public double Time_To_Save(double calc_savings, double init_savings, double cost)
+        public string Time_To_Save(double calc_savings, double init_savings, double cost)
         {
             double time = 0;
 
             cost = cost - init_savings;
             time= cost/calc_savings;
 
-            return time;
+            return Convert.ToString(time);
         }
 
     }
