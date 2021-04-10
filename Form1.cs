@@ -283,7 +283,23 @@ namespace Big_Project_practice
         private void Time_Calc_Button_Click(object sender, EventArgs e)
         {
             Budgeting test_too = new Budgeting();
-            time_textbox.Text = test_too.Time_To_Save(Convert.ToDouble(calc_savings_box_2.Text), Convert.ToDouble(SavingsTotal.Text), Convert.ToDouble(cost_textbox.Text));
+            if (calc_savings_box_2.Text == "" | cost_textbox.Text == "")
+            {
+                MessageBox.Show("Please enter any blank fields.");
+            }
+
+            else
+            {
+                if (CheckNum(calc_savings_box_2.Text) == true && CheckNum(cost_textbox.Text) == true)
+                {
+                    time_textbox.Text = test_too.Time_To_Save(Convert.ToDouble(calc_savings_box_2.Text), Convert.ToDouble(SavingsTotal.Text), Convert.ToDouble(cost_textbox.Text));
+                }
+
+                else
+                {
+                    MessageBox.Show("Please Check to see if entered values are correct.");
+                }
+            }    
         }
 
         private void State_CheckBox_CheckedChanged(object sender, EventArgs e)

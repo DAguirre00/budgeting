@@ -83,7 +83,6 @@ namespace Big_Project_practice
             this.Income_Text.Name = "Income_Text";
             this.Income_Text.Size = new System.Drawing.Size(100, 23);
             this.Income_Text.TabIndex = 1;
-            this.Income_Text.Text = "0";
             this.Income_Text.TextChanged += new System.EventHandler(this.Income_Text_TextChanged);
             // 
             // label1
