@@ -39,7 +39,8 @@ namespace Big_Project_practice
             Budgeting test = new Budgeting();
             State_Info test_also = new State_Info();
 
-            if (State_CheckBox.Checked == true) {
+            if (State_CheckBox.Checked == true)//checks to see if user want's to use "state settings" 
+            {
             
                 if (ComboBoxState.Text.Contains("CT"))
                 {
@@ -97,7 +98,7 @@ namespace Big_Project_practice
 
             }
             
-            if (Income_Text.Text == "" | Tax_Textbox.Text == "" | Cost_Rent_Text.Text == "" | Cost_Food_Text.Text == "" | Cost_Trans_Text.Text == "")
+            if (Income_Text.Text == "" | Tax_Textbox.Text == "" | Cost_Rent_Text.Text == "" | Cost_Food_Text.Text == "" | Cost_Trans_Text.Text == "")//Makes sure nothing is left blank
             {
                 MessageBox.Show("Please enter any blank fields.");
             }
@@ -106,6 +107,7 @@ namespace Big_Project_practice
             {
                 if (CheckNum(Income_Text.Text) == true && CheckNum(Tax_Textbox.Text) == true && CheckNum(Cost_Rent_Text.Text) == true && CheckNum(Cost_Food_Text.Text) == true && CheckNum(Cost_Trans_Text.Text))
                 {
+                    //does calculations and shows user
                     double C_savings = test.Calculated_savings(Convert.ToDouble(Income_Text.Text), Convert.ToDouble(Tax_Textbox.Text), Convert.ToDouble(Cost_Rent_Text.Text), Convert.ToDouble(Cost_Food_Text.Text), Convert.ToDouble(Cost_Trans_Text.Text));
                     Calc_Savings_Text.Text = Convert.ToString(C_savings);
                     calc_savings_box_2.Text = Convert.ToString(C_savings);
@@ -283,7 +285,7 @@ namespace Big_Project_practice
         private void Time_Calc_Button_Click(object sender, EventArgs e)
         {
             Budgeting test_too = new Budgeting();
-            if (calc_savings_box_2.Text == "" | cost_textbox.Text == "")
+            if (calc_savings_box_2.Text == "" | cost_textbox.Text == "")//checks to make sure no box is left blank
             {
                 MessageBox.Show("Please enter any blank fields.");
             }
@@ -292,6 +294,7 @@ namespace Big_Project_practice
             {
                 if (CheckNum(calc_savings_box_2.Text) == true && CheckNum(cost_textbox.Text) == true)
                 {
+                    //does time calculations
                     time_textbox.Text = test_too.Time_To_Save(Convert.ToDouble(calc_savings_box_2.Text), Convert.ToDouble(SavingsTotal.Text), Convert.ToDouble(cost_textbox.Text));
                 }
 
@@ -302,7 +305,7 @@ namespace Big_Project_practice
             }    
         }
 
-        private void State_CheckBox_CheckedChanged(object sender, EventArgs e)
+        private void State_CheckBox_CheckedChanged(object sender, EventArgs e)//allows the change between personal budgeting and prest state budgeting
         {
             if (State_CheckBox.Checked == false)
             {
@@ -323,23 +326,11 @@ namespace Big_Project_practice
 
         }
 
-        bool CheckString(string str)//Deciphers if the string has a period in it, meaning its a double and not an int
-        {
-            for (int k = (str.Length - 1); k > 0; k--) // -1 for the null character
-            {
-                if (str[k] == 46) // Checking ASCII code for "."
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        bool CheckNum(string str)
+        bool CheckNum(string str)//checks to see if string is a viable number
         {
             for (int l = 0; l < str.Length; l++) // -1 for the null character
             {
-                if ((str[l] >= 48 && str[l] <= 57) | str[l] == 46) // Checking ASCII code for numbers
+                if ((str[l] >= 48 && str[l] <= 57) | str[l] == 46) // Checking ASCII code for numbers or a period
                 {
 
                 }

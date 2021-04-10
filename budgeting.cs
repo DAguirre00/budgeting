@@ -7,7 +7,7 @@ namespace Big_Project_practice
     class Budgeting
 
     {
-
+        //takes multiple user, or preset, inputs to calculate total annual savings
         public double Calculated_savings(double income, double tax, double rent, double food, double transport)
         {
 
@@ -16,6 +16,7 @@ namespace Big_Project_practice
             return calc_savings;
         }
 
+        //uses calculated annual savings and current savings, and compares it to users input cost, to calculate time required to save to that cost
         public string Time_To_Save(double calc_savings, double init_savings, double cost)
         {
             double time = 0;

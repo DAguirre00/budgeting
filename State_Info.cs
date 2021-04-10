@@ -8,13 +8,13 @@ namespace Big_Project_practice
     {
         public struct CT
         {
-            public const string rent_CT = "15924";
-            public const string food_CT = "4949";
-            public const string trans_CT = "10120";
+            public const string rent_CT = "15924";//Annual average Cost of rent in CT
+            public const string food_CT = "4949";//Annual average Food of rent in CT
+            public const string trans_CT = "10120";//Annual average Transportation of rent in CT
 
         }
 
-        public string CT_tax(string income)
+        public string CT_tax(string income)//Calculates the income tax for CT based on user income
         {
             double tax_CT = 0;
             double temp_income = Convert.ToDouble(income);
@@ -69,13 +69,13 @@ namespace Big_Project_practice
 
         public struct ME
         {
-            public const string rent_ME = "17592";
-            public const string food_ME = "4972";
-            public const string trans_ME = "7131";
+            public const string rent_ME = "17592";//Annual average Cost of rent in ME
+            public const string food_ME = "4972";//Annual average Cost of food in ME
+            public const string trans_ME = "7131";//Annual average Cost of transportation in ME
 
         }
 
-        public string ME_tax(string income)
+        public string ME_tax(string income)//Calculates the income tax for ME based on user income
         {
             double tax_ME = 0;
             double temp_income = Convert.ToDouble(income);
@@ -106,12 +106,12 @@ namespace Big_Project_practice
 
         public struct MA
         {
-            public const string rent_MA = "27024";
-            public const string food_MA = "5056";
-            public const string trans_MA = "9706";
+            public const string rent_MA = "27024";//Annual average Cost of rent in MA
+            public const string food_MA = "5056";//Annual average Cost of food in MA
+            public const string trans_MA = "9706";//Annual average Cost of transportation in MA
         }
 
-        public string MA_tax(string income)
+        public string MA_tax(string income)//Calculates the income tax for MA based on user income
         {
             double tax_MA = 0;
             double temp_income = Convert.ToDouble(income);
@@ -130,22 +130,22 @@ namespace Big_Project_practice
 
         public struct NH
         {
-            public const string tax_NH = "0";
-            public const string rent_NH = "20976";
-            public const string food_NH = "4968";
-            public const string trans_NH = "7889";
+            public const string tax_NH = "0";//Annual average Cost of income tax in NH
+            public const string rent_NH = "20976";//Annual average Cost of rent in NH
+            public const string food_NH = "4968";//Annual average Cost of food in NH
+            public const string trans_NH = "7889";//Annual average Cost of transportation in NH
 
         }
 
         public struct RI
         {
-            public const string rent_RI = "20700";
-            public const string food_RI = "4944";
-            public const string trans_RI = "9553";
+            public const string rent_RI = "20700";//Annual average Cost of rent in RI
+            public const string food_RI = "4944";//Annual average Cost of food in RI
+            public const string trans_RI = "9553";//Annual average Cost of transportation in RI
 
         }
 
-        public string RI_tax(string income)
+        public string RI_tax(string income)//Calculates the income tax for RI based on user income
         {
             double tax_RI = 0;
             double temp_income = Convert.ToDouble(income);
@@ -177,13 +177,13 @@ namespace Big_Project_practice
         public struct VT
         {
             
-            public const string rent_VT = "19188";
-            public const string food_VT = "4954";
-            public const string trans_VT = "7014";
+            public const string rent_VT = "19188";//Annual average Cost of rent in VT
+            public const string food_VT = "4954";//Annual average Cost of food in VT
+            public const string trans_VT = "7014";//Annual average Cost of Transportation in VT
 
         }
 
-        public string VT_tax(string income)
+        public string VT_tax(string income)//Calculates the income tax for VT based on user income
         {
             double tax_VT = 0;
             double temp_income = Convert.ToDouble(income);
