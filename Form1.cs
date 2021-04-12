@@ -159,34 +159,34 @@ namespace Big_Project_practice
         {
 
         }
-
-        private void DepositButton_Click(object sender, EventArgs e)
+        //start of Dominic A code
+        private void DepositButton_Click(object sender, EventArgs e) //What is run when you press deposit
         {
-            if (DepositBox.Text == "" || DepositText.Text == "")
+            if (DepositBox.Text == "" || DepositText.Text == "") //Checks to make sure nothing is blank
             {
                 MessageBox.Show("Please select an account and amount.");
             }
             else
             {
-                CheckingSavings CheckingSavings = new CheckingSavings();
+                CheckingSavings CheckingSavings = new CheckingSavings(); //Declares the class and sends over the needed values to the class in the following lines
                 CheckingSavings.Amount = DepositText.Text;
                 CheckingSavings.Account = DepositBox.Text;
                 CheckingSavings.CTotal = CheckingTotal.Text;
                 CheckingSavings.STotal = SavingsTotal.Text;
 
-                if (DepositBox.Text == "Savings")
+                if (DepositBox.Text == "Savings") //Checks where the money is moving and runs the code as needed
                 {
-                    string temp = CheckingSavings.Deposit();
+                    string temp = CheckingSavings.Deposit();//runs the class
                     if (temp != "Error")
                     {
-                        SavingsTotal.Text = temp;
+                        SavingsTotal.Text = temp; // sets the new value for the total account 
                     }
                     else
                     {
                         MessageBox.Show("Enter a number into the box");
                     }
                 }
-                else if (DepositBox.Text == "Checking")
+                else if (DepositBox.Text == "Checking")//same as prior code except changes checking
                 {
                     string temp = CheckingSavings.Deposit();
                     if (temp != "Error")
@@ -205,7 +205,7 @@ namespace Big_Project_practice
             }
         }
 
-        private void WithdrawButton_Click(object sender, EventArgs e)
+        private void WithdrawButton_Click(object sender, EventArgs e)//same as deposit 
         {
             CheckingSavings CheckingSavings = new CheckingSavings();
             CheckingSavings.Amount = WithdrawText.Text;
@@ -250,7 +250,7 @@ namespace Big_Project_practice
             }
         }
 
-        private void Transferbutton_Click(object sender, EventArgs e)
+        private void Transferbutton_Click(object sender, EventArgs e)//same as prior two exept uses an array because two values are needed to be returned
         {
             CheckingSavings CheckingSavings = new CheckingSavings();
             CheckingSavings.Amount = TransferText.Text;
@@ -275,7 +275,7 @@ namespace Big_Project_practice
                     SavingsTotal.Text = temp[1];
                 }
             }
-        }
+        } //End of Dominic A code
 
         private void Income_Text_TextChanged(object sender, EventArgs e)
         {
