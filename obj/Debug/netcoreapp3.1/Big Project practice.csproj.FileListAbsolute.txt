@@ -45,3 +45,19 @@ C:\Users\domin\Documents\Git\bin\Debug\netcoreapp3.1\Big Project practice.runtim
 C:\Users\domin\Documents\Git\bin\Debug\netcoreapp3.1\Big Project practice.dll
 C:\Users\domin\Documents\Git\bin\Debug\netcoreapp3.1\Big Project practice.pdb
 C:\Users\domin\Documents\Git\obj\Debug\netcoreapp3.1\Big Project practice.genruntimeconfig.cache
+C:\Users\Cooper\Desktop\budgeting\bin\Debug\netcoreapp3.1\Big Project practice.exe
+C:\Users\Cooper\Desktop\budgeting\bin\Debug\netcoreapp3.1\Big Project practice.deps.json
+C:\Users\Cooper\Desktop\budgeting\bin\Debug\netcoreapp3.1\Big Project practice.runtimeconfig.json
+C:\Users\Cooper\Desktop\budgeting\bin\Debug\netcoreapp3.1\Big Project practice.runtimeconfig.dev.json
+C:\Users\Cooper\Desktop\budgeting\bin\Debug\netcoreapp3.1\Big Project practice.dll
+C:\Users\Cooper\Desktop\budgeting\bin\Debug\netcoreapp3.1\Big Project practice.pdb
+C:\Users\Cooper\Desktop\budgeting\obj\Debug\netcoreapp3.1\Big Project practice.csprojAssemblyReference.cache
+C:\Users\Cooper\Desktop\budgeting\obj\Debug\netcoreapp3.1\Big_Project_practice.Form1.resources
+C:\Users\Cooper\Desktop\budgeting\obj\Debug\netcoreapp3.1\Big_Project_practice.Properties.Resources.resources
+C:\Users\Cooper\Desktop\budgeting\obj\Debug\netcoreapp3.1\Big Project practice.csproj.GenerateResource.cache
+C:\Users\Cooper\Desktop\budgeting\obj\Debug\netcoreapp3.1\Big Project practice.AssemblyInfoInputs.cache
+C:\Users\Cooper\Desktop\budgeting\obj\Debug\netcoreapp3.1\Big Project practice.AssemblyInfo.cs
+C:\Users\Cooper\Desktop\budgeting\obj\Debug\netcoreapp3.1\Big Project practice.csproj.CoreCompileInputs.cache
+C:\Users\Cooper\Desktop\budgeting\obj\Debug\netcoreapp3.1\Big Project practice.dll
+C:\Users\Cooper\Desktop\budgeting\obj\Debug\netcoreapp3.1\Big Project practice.pdb
+C:\Users\Cooper\Desktop\budgeting\obj\Debug\netcoreapp3.1\Big Project practice.genruntimeconfig.cache

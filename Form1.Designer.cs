@@ -29,34 +29,28 @@ namespace Big_Project_practice
         /// </summary>
         private void InitializeComponent()
         {
-            this.Income_Const_Box = new System.Windows.Forms.CheckBox();
             this.Income_Text = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ComboBoxState = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Cost_Rent_Text = new System.Windows.Forms.TextBox();
             this.CostRentTextbox = new System.Windows.Forms.Label();
-            this.Cost_Rent_Const = new System.Windows.Forms.CheckBox();
             this.Cost_Food_Text = new System.Windows.Forms.TextBox();
-            this.Cost_Food_Const = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Cost_Trans_Text = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Cost_Trans_Const = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.Calc_Savings_Text = new System.Windows.Forms.TextBox();
-            this.Current_Savings_Text = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Tot_Savings_Text = new System.Windows.Forms.TextBox();
-            this.Calc_Savings_Const = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Calculate_Button = new System.Windows.Forms.Button();
             this.Tax_Textbox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.State_CheckBox = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.calc_savings_box_2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.Transferbutton = new System.Windows.Forms.Button();
             this.TransferBox = new System.Windows.Forms.ComboBox();
             this.TransferText = new System.Windows.Forms.TextBox();
@@ -65,33 +59,23 @@ namespace Big_Project_practice
             this.DepositButton = new System.Windows.Forms.Button();
             this.WithdrawBox = new System.Windows.Forms.ComboBox();
             this.DepositBox = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.Withdraw = new System.Windows.Forms.Label();
             this.Deposit = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.cost_textbox = new System.Windows.Forms.TextBox();
+            this.time_textbox = new System.Windows.Forms.TextBox();
             this.SavingsTotal = new System.Windows.Forms.TextBox();
             this.DepositText = new System.Windows.Forms.TextBox();
             this.WithdrawText = new System.Windows.Forms.TextBox();
             this.CheckingTotal = new System.Windows.Forms.TextBox();
             this.Time_Calc_Button = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Income_Const_Box
-            // 
-            this.Income_Const_Box.AutoSize = true;
-            this.Income_Const_Box.Location = new System.Drawing.Point(136, 53);
-            this.Income_Const_Box.Name = "Income_Const_Box";
-            this.Income_Const_Box.Size = new System.Drawing.Size(103, 19);
-            this.Income_Const_Box.TabIndex = 0;
-            this.Income_Const_Box.Text = "Keep Constant";
-            this.Income_Const_Box.UseVisualStyleBackColor = true;
             // 
             // Income_Text
             // 
@@ -99,70 +83,27 @@ namespace Big_Project_practice
             this.Income_Text.Name = "Income_Text";
             this.Income_Text.Size = new System.Drawing.Size(100, 23);
             this.Income_Text.TabIndex = 1;
+            this.Income_Text.TextChanged += new System.EventHandler(this.Income_Text_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(30, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 15);
+            this.label1.Size = new System.Drawing.Size(114, 15);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Enter Income:";
+            this.label1.Text = "Enter Yearly Income:";
             // 
             // ComboBoxState
             // 
             this.ComboBoxState.FormattingEnabled = true;
             this.ComboBoxState.Items.AddRange(new object[] {
-            "AL",
-            "AK",
-            "AZ",
-            "AR",
-            "CA",
-            "CO",
             "CT",
-            "DE",
-            "FL",
-            "GA",
-            "HI",
-            "ID",
-            "IL",
-            "IN",
-            "IA",
-            "KS",
-            "KY",
-            "LA",
             "ME",
-            "MD",
             "MA",
-            "MI",
-            "MN",
-            "MS",
-            "MO",
-            "MT",
-            "NE",
-            "NV",
             "NH",
-            "NJ",
-            "NM",
-            "NY",
-            "NC",
-            "ND",
-            "OH",
-            "OK",
-            "OR",
-            "PA",
             "RI",
-            "SC",
-            "SD",
-            "TN",
-            "TX",
-            "UT",
-            "VT",
-            "VA",
-            "WA",
-            "WV",
-            "WI",
-            "WY"});
+            "VT"});
             this.ComboBoxState.Location = new System.Drawing.Point(276, 51);
             this.ComboBoxState.Name = "ComboBoxState";
             this.ComboBoxState.Size = new System.Drawing.Size(121, 23);
@@ -181,8 +122,10 @@ namespace Big_Project_practice
             // 
             this.Cost_Rent_Text.Location = new System.Drawing.Point(28, 164);
             this.Cost_Rent_Text.Name = "Cost_Rent_Text";
+            this.Cost_Rent_Text.ReadOnly = true;
             this.Cost_Rent_Text.Size = new System.Drawing.Size(100, 23);
             this.Cost_Rent_Text.TabIndex = 5;
+            this.Cost_Rent_Text.Text = "0";
             // 
             // CostRentTextbox
             // 
@@ -193,32 +136,14 @@ namespace Big_Project_practice
             this.CostRentTextbox.TabIndex = 6;
             this.CostRentTextbox.Text = "Cost of Rent:";
             // 
-            // Cost_Rent_Const
-            // 
-            this.Cost_Rent_Const.AutoSize = true;
-            this.Cost_Rent_Const.Location = new System.Drawing.Point(145, 167);
-            this.Cost_Rent_Const.Name = "Cost_Rent_Const";
-            this.Cost_Rent_Const.Size = new System.Drawing.Size(103, 19);
-            this.Cost_Rent_Const.TabIndex = 7;
-            this.Cost_Rent_Const.Text = "Keep Constant";
-            this.Cost_Rent_Const.UseVisualStyleBackColor = true;
-            // 
             // Cost_Food_Text
             // 
             this.Cost_Food_Text.Location = new System.Drawing.Point(276, 164);
             this.Cost_Food_Text.Name = "Cost_Food_Text";
+            this.Cost_Food_Text.ReadOnly = true;
             this.Cost_Food_Text.Size = new System.Drawing.Size(100, 23);
             this.Cost_Food_Text.TabIndex = 8;
-            // 
-            // Cost_Food_Const
-            // 
-            this.Cost_Food_Const.AutoSize = true;
-            this.Cost_Food_Const.Location = new System.Drawing.Point(395, 167);
-            this.Cost_Food_Const.Name = "Cost_Food_Const";
-            this.Cost_Food_Const.Size = new System.Drawing.Size(103, 19);
-            this.Cost_Food_Const.TabIndex = 9;
-            this.Cost_Food_Const.Text = "Keep Constant";
-            this.Cost_Food_Const.UseVisualStyleBackColor = true;
+            this.Cost_Food_Text.Text = "0";
             // 
             // label3
             // 
@@ -233,8 +158,10 @@ namespace Big_Project_practice
             // 
             this.Cost_Trans_Text.Location = new System.Drawing.Point(515, 164);
             this.Cost_Trans_Text.Name = "Cost_Trans_Text";
+            this.Cost_Trans_Text.ReadOnly = true;
             this.Cost_Trans_Text.Size = new System.Drawing.Size(127, 23);
             this.Cost_Trans_Text.TabIndex = 11;
+            this.Cost_Trans_Text.Text = "0";
             // 
             // label4
             // 
@@ -245,76 +172,24 @@ namespace Big_Project_practice
             this.label4.TabIndex = 12;
             this.label4.Text = "Cost of Transportation:";
             // 
-            // Cost_Trans_Const
-            // 
-            this.Cost_Trans_Const.AutoSize = true;
-            this.Cost_Trans_Const.Location = new System.Drawing.Point(661, 166);
-            this.Cost_Trans_Const.Name = "Cost_Trans_Const";
-            this.Cost_Trans_Const.Size = new System.Drawing.Size(103, 19);
-            this.Cost_Trans_Const.TabIndex = 13;
-            this.Cost_Trans_Const.Text = "Keep Constant";
-            this.Cost_Trans_Const.UseVisualStyleBackColor = true;
-            this.Cost_Trans_Const.CheckedChanged += new System.EventHandler(this.Cost_Trans_Const_CheckedChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(276, 268);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 15);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Enter Current Savings:";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(28, 268);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 15);
+            this.label6.Size = new System.Drawing.Size(143, 15);
             this.label6.TabIndex = 15;
-            this.label6.Text = "Calculated Savings:";
+            this.label6.Text = "Calculated Yearly Savings:";
             // 
             // Calc_Savings_Text
             // 
             this.Calc_Savings_Text.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Calc_Savings_Text.Location = new System.Drawing.Point(28, 287);
             this.Calc_Savings_Text.Name = "Calc_Savings_Text";
+            this.Calc_Savings_Text.ReadOnly = true;
             this.Calc_Savings_Text.Size = new System.Drawing.Size(100, 23);
             this.Calc_Savings_Text.TabIndex = 16;
-            // 
-            // Current_Savings_Text
-            // 
-            this.Current_Savings_Text.Location = new System.Drawing.Point(276, 287);
-            this.Current_Savings_Text.Name = "Current_Savings_Text";
-            this.Current_Savings_Text.Size = new System.Drawing.Size(100, 23);
-            this.Current_Savings_Text.TabIndex = 17;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(515, 268);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 15);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Total Savings:";
-            // 
-            // Tot_Savings_Text
-            // 
-            this.Tot_Savings_Text.Location = new System.Drawing.Point(515, 285);
-            this.Tot_Savings_Text.Name = "Tot_Savings_Text";
-            this.Tot_Savings_Text.ReadOnly = true;
-            this.Tot_Savings_Text.Size = new System.Drawing.Size(100, 23);
-            this.Tot_Savings_Text.TabIndex = 19;
-            // 
-            // Calc_Savings_Const
-            // 
-            this.Calc_Savings_Const.AutoSize = true;
-            this.Calc_Savings_Const.Location = new System.Drawing.Point(145, 287);
-            this.Calc_Savings_Const.Name = "Calc_Savings_Const";
-            this.Calc_Savings_Const.Size = new System.Drawing.Size(103, 19);
-            this.Calc_Savings_Const.TabIndex = 20;
-            this.Calc_Savings_Const.Text = "Keep Constant";
-            this.Calc_Savings_Const.UseVisualStyleBackColor = true;
+            this.Calc_Savings_Text.Text = "0";
             // 
             // label8
             // 
@@ -341,6 +216,7 @@ namespace Big_Project_practice
             this.Tax_Textbox.ReadOnly = true;
             this.Tax_Textbox.Size = new System.Drawing.Size(100, 23);
             this.Tax_Textbox.TabIndex = 27;
+            this.Tax_Textbox.Text = "0";
             // 
             // label11
             // 
@@ -364,30 +240,22 @@ namespace Big_Project_practice
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.State_CheckBox);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.Calculate_Button);
             this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.Calc_Savings_Const);
             this.tabPage1.Controls.Add(this.Income_Text);
-            this.tabPage1.Controls.Add(this.Tot_Savings_Text);
             this.tabPage1.Controls.Add(this.Tax_Textbox);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.Income_Const_Box);
-            this.tabPage1.Controls.Add(this.Current_Savings_Text);
             this.tabPage1.Controls.Add(this.CostRentTextbox);
             this.tabPage1.Controls.Add(this.Calc_Savings_Text);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.Cost_Rent_Text);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.Cost_Rent_Const);
             this.tabPage1.Controls.Add(this.Cost_Food_Text);
-            this.tabPage1.Controls.Add(this.Cost_Food_Const);
             this.tabPage1.Controls.Add(this.Cost_Trans_Text);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.ComboBoxState);
-            this.tabPage1.Controls.Add(this.Cost_Trans_Const);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -396,8 +264,23 @@ namespace Big_Project_practice
             this.tabPage1.Text = "Budgeting";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // State_CheckBox
+            // 
+            this.State_CheckBox.AutoSize = true;
+            this.State_CheckBox.Checked = true;
+            this.State_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.State_CheckBox.Location = new System.Drawing.Point(30, 97);
+            this.State_CheckBox.Name = "State_CheckBox";
+            this.State_CheckBox.Size = new System.Drawing.Size(417, 19);
+            this.State_CheckBox.TabIndex = 29;
+            this.State_CheckBox.Text = "Keep box checked for average state costs, unhceck for personal budgeting";
+            this.State_CheckBox.UseVisualStyleBackColor = true;
+            this.State_CheckBox.CheckedChanged += new System.EventHandler(this.State_CheckBox_CheckedChanged);
+            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.calc_savings_box_2);
+            this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.Transferbutton);
             this.tabPage2.Controls.Add(this.TransferBox);
             this.tabPage2.Controls.Add(this.TransferText);
@@ -406,20 +289,20 @@ namespace Big_Project_practice
             this.tabPage2.Controls.Add(this.DepositButton);
             this.tabPage2.Controls.Add(this.WithdrawBox);
             this.tabPage2.Controls.Add(this.DepositBox);
-            this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.Withdraw);
             this.tabPage2.Controls.Add(this.Deposit);
             this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.textBox6);
-            this.tabPage2.Controls.Add(this.textBox5);
+            this.tabPage2.Controls.Add(this.cost_textbox);
+            this.tabPage2.Controls.Add(this.time_textbox);
             this.tabPage2.Controls.Add(this.SavingsTotal);
             this.tabPage2.Controls.Add(this.DepositText);
             this.tabPage2.Controls.Add(this.WithdrawText);
             this.tabPage2.Controls.Add(this.CheckingTotal);
             this.tabPage2.Controls.Add(this.Time_Calc_Button);
             this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -428,6 +311,23 @@ namespace Big_Project_practice
             this.tabPage2.Text = "Checkings and Savings";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // calc_savings_box_2
+            // 
+            this.calc_savings_box_2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.calc_savings_box_2.Location = new System.Drawing.Point(46, 319);
+            this.calc_savings_box_2.Name = "calc_savings_box_2";
+            this.calc_savings_box_2.Size = new System.Drawing.Size(100, 23);
+            this.calc_savings_box_2.TabIndex = 48;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(46, 301);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 15);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "Yearly Savings:";
             // 
             // Transferbutton
             // 
@@ -515,15 +415,6 @@ namespace Big_Project_practice
             this.DepositBox.TabIndex = 39;
             this.DepositBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(385, 242);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(121, 15);
-            this.label15.TabIndex = 38;
-            this.label15.Text = "How Long It Will Take";
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -571,22 +462,23 @@ namespace Big_Project_practice
             this.label9.Text = "Checking Account";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // textBox6
+            // cost_textbox
             // 
-            this.textBox6.Location = new System.Drawing.Point(46, 265);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(136, 23);
-            this.textBox6.TabIndex = 32;
+            this.cost_textbox.Location = new System.Drawing.Point(46, 265);
+            this.cost_textbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cost_textbox.Name = "cost_textbox";
+            this.cost_textbox.Size = new System.Drawing.Size(136, 23);
+            this.cost_textbox.TabIndex = 32;
             // 
-            // textBox5
+            // time_textbox
             // 
-            this.textBox5.Location = new System.Drawing.Point(385, 265);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(136, 23);
-            this.textBox5.TabIndex = 31;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.time_textbox.Location = new System.Drawing.Point(385, 265);
+            this.time_textbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.time_textbox.Name = "time_textbox";
+            this.time_textbox.ReadOnly = true;
+            this.time_textbox.Size = new System.Drawing.Size(136, 23);
+            this.time_textbox.TabIndex = 31;
+            this.time_textbox.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // SavingsTotal
             // 
@@ -630,6 +522,16 @@ namespace Big_Project_practice
             this.Time_Calc_Button.TabIndex = 26;
             this.Time_Calc_Button.Text = "Calculate";
             this.Time_Calc_Button.UseVisualStyleBackColor = true;
+            this.Time_Calc_Button.Click += new System.EventHandler(this.Time_Calc_Button_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(385, 242);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(174, 30);
+            this.label15.TabIndex = 38;
+            this.label15.Text = "Time required to save (in years):\r\n\r\n";
             // 
             // Form1
             // 
@@ -650,28 +552,18 @@ namespace Big_Project_practice
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckBox Income_Const_Box;
         private System.Windows.Forms.TextBox Income_Text;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox ComboBoxState;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Cost_Rent_Text;
         private System.Windows.Forms.Label CostRentTextbox;
-        private System.Windows.Forms.CheckBox Cost_Rent_Const;
         private System.Windows.Forms.TextBox Cost_Food_Text;
-        private System.Windows.Forms.CheckBox Cost_Food_Const;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Cost_Trans_Text;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox Cost_Trans_Const;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox Calc_Savings_Text;
-        private System.Windows.Forms.TextBox Current_Savings_Text;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox Tot_Savings_Text;
-        private System.Windows.Forms.CheckBox Calc_Savings_Const;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button Calculate_Button;
         private System.Windows.Forms.TextBox Tax_Textbox;
@@ -681,8 +573,8 @@ namespace Big_Project_practice
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button Time_Calc_Button;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox cost_textbox;
+        private System.Windows.Forms.TextBox time_textbox;
         private System.Windows.Forms.TextBox SavingsTotal;
         private System.Windows.Forms.TextBox DepositText;
         private System.Windows.Forms.TextBox WithdrawText;
@@ -701,6 +593,9 @@ namespace Big_Project_practice
         private System.Windows.Forms.Button DepositButton;
         private System.Windows.Forms.Button Transferbutton;
         private System.Windows.Forms.Label oith;
+        private System.Windows.Forms.CheckBox State_CheckBox;
+        private System.Windows.Forms.TextBox calc_savings_box_2;
+        private System.Windows.Forms.Label label5;
     }
 }
 
