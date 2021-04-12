@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitRep\\budget\\Big Project practice.csproj": {}
+    "D:\\GitRep\\Budget\\Big Project practice.csproj": {}
   },
   "projects": {
-    "D:\\GitRep\\budget\\Big Project practice.csproj": {
+    "D:\\GitRep\\Budget\\Big Project practice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitRep\\budget\\Big Project practice.csproj",
+        "projectUniqueName": "D:\\GitRep\\Budget\\Big Project practice.csproj",
         "projectName": "Big Project practice",
-        "projectPath": "D:\\GitRep\\budget\\Big Project practice.csproj",
+        "projectPath": "D:\\GitRep\\Budget\\Big Project practice.csproj",
         "packagesPath": "C:\\Users\\domin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitRep\\budget\\obj\\",
+        "outputPath": "D:\\GitRep\\Budget\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

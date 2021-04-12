@@ -190,7 +190,7 @@ namespace Big_Project_practice
                 else
                 {
                     CheckingTotal.Text = temp[0];
-                    SavingsTotal.Text = temp[2];
+                    SavingsTotal.Text = temp[1];
                 }
             }
         }
