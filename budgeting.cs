@@ -22,6 +22,10 @@ namespace Big_Project_practice
             double time = 0;
 
             cost = cost - init_savings;
+            if(cost <= 0)
+            {
+                return "Already Saved";
+            }
             time= cost/calc_savings;
 
             return Convert.ToString(time);
