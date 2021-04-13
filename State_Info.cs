@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
+//CB Start
 namespace Big_Project_practice
 {
     class State_Info
@@ -220,3 +221,4 @@ namespace Big_Project_practice
 
     }
 }
+//CB end

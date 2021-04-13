@@ -34,6 +34,7 @@ namespace Big_Project_practice
 
         }
 
+        //CB Start
         private void Calculate_Button_Click(object sender, EventArgs e)
         {
             Budgeting test = new Budgeting();
@@ -119,6 +120,7 @@ namespace Big_Project_practice
                 }
             }
         }
+        //CB end
         
         private void label9_Click(object sender, EventArgs e)
         {
@@ -282,6 +284,7 @@ namespace Big_Project_practice
 
         }
 
+        //CB start
         private void Time_Calc_Button_Click(object sender, EventArgs e)
         {
             Budgeting test_too = new Budgeting();
@@ -341,7 +344,7 @@ namespace Big_Project_practice
             }
             return true;
         }
-
+        //CB end
 
     }
 }
