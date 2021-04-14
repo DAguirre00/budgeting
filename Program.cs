@@ -17,7 +17,7 @@ namespace Big_Project_practice
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NENE());
+            Application.Run(new Form1());
         }
     }
 }
