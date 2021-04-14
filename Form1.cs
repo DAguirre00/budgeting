@@ -45,51 +45,104 @@ namespace Big_Project_practice
             
                 if (ComboBoxState.Text.Contains("CT"))
                 {
-                    Tax_Textbox.Text = test_also.CT_tax(Income_Text.Text);
-                    Cost_Rent_Text.Text = State_Info.CT.rent_CT;
-                    Cost_Food_Text.Text = State_Info.CT.food_CT;
-                    Cost_Trans_Text.Text = State_Info.CT.trans_CT;
+                    if (double.TryParse(Income_Text.Text, out double a) == false | double.TryParse(Tax_Textbox.Text, out a) == false | double.TryParse(Cost_Rent_Text.Text, out a) == false | double.TryParse(Cost_Food_Text.Text, out a) == false | double.TryParse(Cost_Trans_Text.Text, out a) == false)
+                    {
+                        MessageBox.Show("Please make sure to enter correct values.");
+
+                    }
+
+                    else
+                    {
+                        Tax_Textbox.Text = test_also.CT_tax(Income_Text.Text);
+                        Cost_Rent_Text.Text = State_Info.CT.rent_CT;
+                        Cost_Food_Text.Text = State_Info.CT.food_CT;
+                        Cost_Trans_Text.Text = State_Info.CT.trans_CT;
+                    }
                 }
 
                 if (ComboBoxState.Text.Contains("ME"))
                 {
-                    Tax_Textbox.Text = test_also.ME_tax(Income_Text.Text);
-                    Cost_Rent_Text.Text = State_Info.ME.rent_ME;
-                    Cost_Food_Text.Text = State_Info.ME.food_ME;
-                    Cost_Trans_Text.Text = State_Info.ME.trans_ME;
+                    if (double.TryParse(Income_Text.Text, out double a) == false | double.TryParse(Tax_Textbox.Text, out a) == false | double.TryParse(Cost_Rent_Text.Text, out a) == false | double.TryParse(Cost_Food_Text.Text, out a) == false | double.TryParse(Cost_Trans_Text.Text, out a) == false)
+                    {
+                        MessageBox.Show("Please make sure to enter correct values.");
+
+                    }
+
+                    else
+                    {
+                        Tax_Textbox.Text = test_also.ME_tax(Income_Text.Text);
+                        Cost_Rent_Text.Text = State_Info.ME.rent_ME;
+                        Cost_Food_Text.Text = State_Info.ME.food_ME;
+                        Cost_Trans_Text.Text = State_Info.ME.trans_ME;
+                    }
                 }
 
                 if (ComboBoxState.Text.Contains("MA"))
                 {
-                    Tax_Textbox.Text = test_also.MA_tax(Income_Text.Text);
-                    Cost_Rent_Text.Text = State_Info.MA.rent_MA;
-                    Cost_Food_Text.Text = State_Info.MA.food_MA;
-                    Cost_Trans_Text.Text = State_Info.MA.trans_MA;
+                    if (double.TryParse(Income_Text.Text, out double a) == false | double.TryParse(Tax_Textbox.Text, out a) == false | double.TryParse(Cost_Rent_Text.Text, out a) == false | double.TryParse(Cost_Food_Text.Text, out a) == false | double.TryParse(Cost_Trans_Text.Text, out a) == false)
+                    {
+                        MessageBox.Show("Please make sure to enter correct values.");
+
+                    }
+                    else
+                    {
+                        Tax_Textbox.Text = test_also.MA_tax(Income_Text.Text);
+                        Cost_Rent_Text.Text = State_Info.MA.rent_MA;
+                        Cost_Food_Text.Text = State_Info.MA.food_MA;
+                        Cost_Trans_Text.Text = State_Info.MA.trans_MA;
+                    }
                 }
 
                 if (ComboBoxState.Text.Contains("NH"))
                 {
-                    Tax_Textbox.Text = State_Info.NH.tax_NH;
-                    Cost_Rent_Text.Text = State_Info.NH.rent_NH;
-                    Cost_Food_Text.Text = State_Info.NH.food_NH;
-                    Cost_Trans_Text.Text = State_Info.NH.trans_NH;
+                    if (double.TryParse(Income_Text.Text, out double a) == false | double.TryParse(Tax_Textbox.Text, out a) == false | double.TryParse(Cost_Rent_Text.Text, out a) == false | double.TryParse(Cost_Food_Text.Text, out a) == false | double.TryParse(Cost_Trans_Text.Text, out a) == false)
+                    {
+                        MessageBox.Show("Please make sure to enter correct values.");
+
+                    }
+
+                    else
+                    {
+                        Tax_Textbox.Text = State_Info.NH.tax_NH;
+                        Cost_Rent_Text.Text = State_Info.NH.rent_NH;
+                        Cost_Food_Text.Text = State_Info.NH.food_NH;
+                        Cost_Trans_Text.Text = State_Info.NH.trans_NH;
+                    }
                 }
 
                 if (ComboBoxState.Text.Contains("RI"))
                 {
-                    Tax_Textbox.Text = test_also.RI_tax(Income_Text.Text);
-                    Cost_Rent_Text.Text = State_Info.RI.rent_RI;
-                    Cost_Food_Text.Text = State_Info.RI.food_RI;
-                    Cost_Trans_Text.Text = State_Info.RI.trans_RI;
+                    if (double.TryParse(Income_Text.Text, out double a) == false | double.TryParse(Tax_Textbox.Text, out a) == false | double.TryParse(Cost_Rent_Text.Text, out a) == false | double.TryParse(Cost_Food_Text.Text, out a) == false | double.TryParse(Cost_Trans_Text.Text, out a) == false)
+                    {
+                        MessageBox.Show("Please make sure to enter correct values.");
+
+                    }
+
+                    else
+                    {
+                        Tax_Textbox.Text = test_also.RI_tax(Income_Text.Text);
+                        Cost_Rent_Text.Text = State_Info.RI.rent_RI;
+                        Cost_Food_Text.Text = State_Info.RI.food_RI;
+                        Cost_Trans_Text.Text = State_Info.RI.trans_RI;
+                    }
                 }
 
                 if (ComboBoxState.Text.Contains("VT"))
                 {
-                    Tax_Textbox.Text = test_also.VT_tax(Income_Text.Text);
-                    Cost_Rent_Text.Text = State_Info.VT.rent_VT;
-                    Cost_Food_Text.Text = State_Info.VT.food_VT;
-                    Cost_Trans_Text.Text = State_Info.VT.trans_VT;
-                   
+                    if (double.TryParse(Income_Text.Text, out double a) == false | double.TryParse(Tax_Textbox.Text, out a) == false | double.TryParse(Cost_Rent_Text.Text, out a) == false | double.TryParse(Cost_Food_Text.Text, out a) == false | double.TryParse(Cost_Trans_Text.Text, out a) == false)
+                    {
+                        MessageBox.Show("Please make sure to enter correct values.");
+
+                    }
+
+                    else
+                    {
+                        Tax_Textbox.Text = test_also.VT_tax(Income_Text.Text);
+                        Cost_Rent_Text.Text = State_Info.VT.rent_VT;
+                        Cost_Food_Text.Text = State_Info.VT.food_VT;
+                        Cost_Trans_Text.Text = State_Info.VT.trans_VT;
+
+                    }
                 }
 
                 if (ComboBoxState.Text == "")
@@ -104,9 +157,16 @@ namespace Big_Project_practice
                 MessageBox.Show("Please enter any blank fields.");
             }
 
+
             else
             {
-                if (CheckNum(Income_Text.Text) == true && CheckNum(Tax_Textbox.Text) == true && CheckNum(Cost_Rent_Text.Text) == true && CheckNum(Cost_Food_Text.Text) == true && CheckNum(Cost_Trans_Text.Text))
+                if (double.TryParse(Income_Text.Text, out double a) == false | double.TryParse(Tax_Textbox.Text, out a) == false | double.TryParse(Cost_Rent_Text.Text, out a) == false | double.TryParse(Cost_Food_Text.Text, out a) == false | double.TryParse(Cost_Trans_Text.Text, out a) == false)
+                {
+                    MessageBox.Show("Please make sure to enter correct values.");
+
+                }
+
+                else if  (CheckNum(Income_Text.Text) == true && CheckNum(Tax_Textbox.Text) == true && CheckNum(Cost_Rent_Text.Text) == true && CheckNum(Cost_Food_Text.Text) == true && CheckNum(Cost_Trans_Text.Text))
                 {
                     //does calculations and shows user
                     double C_savings = test.Calculated_savings(Convert.ToDouble(Income_Text.Text), Convert.ToDouble(Tax_Textbox.Text), Convert.ToDouble(Cost_Rent_Text.Text), Convert.ToDouble(Cost_Food_Text.Text), Convert.ToDouble(Cost_Trans_Text.Text));
