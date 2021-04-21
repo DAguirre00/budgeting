@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
+//CB Start
 namespace Big_Project_practice
 {
     class Budgeting
@@ -22,6 +23,10 @@ namespace Big_Project_practice
             double time = 0;
 
             cost = cost - init_savings;
+            if(cost <= 0)
+            {
+                return "Already Saved";
+            }
             time= cost/calc_savings;
 
             return Convert.ToString(time);
@@ -29,3 +34,4 @@ namespace Big_Project_practice
 
     }
 }
+//CB end

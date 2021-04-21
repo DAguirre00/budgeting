@@ -240,6 +240,7 @@ namespace Big_Project_practice
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tabPage1.Controls.Add(this.State_CheckBox);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.Calculate_Button);
@@ -262,7 +263,6 @@ namespace Big_Project_practice
             this.tabPage1.Size = new System.Drawing.Size(768, 378);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Budgeting";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // State_CheckBox
             // 
@@ -279,6 +279,7 @@ namespace Big_Project_practice
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tabPage2.Controls.Add(this.calc_savings_box_2);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.Transferbutton);
@@ -309,7 +310,6 @@ namespace Big_Project_practice
             this.tabPage2.Size = new System.Drawing.Size(768, 378);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Checkings and Savings";
-            this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // calc_savings_box_2
@@ -540,7 +540,7 @@ namespace Big_Project_practice
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "NENE";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
