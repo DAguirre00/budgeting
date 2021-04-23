@@ -355,10 +355,11 @@ namespace Big_Project_practice
 
             else
             {
-                if (CheckNum(calc_savings_box_2.Text) == true && CheckNum(cost_textbox.Text) == true)
+                if (double.TryParse(calc_savings_box_2.Text, out double a) == true && double.TryParse(cost_textbox.Text, out double b) == true)
                 {
                     //does time calculations
                     time_textbox.Text = test_too.Time_To_Save(Convert.ToDouble(calc_savings_box_2.Text), Convert.ToDouble(SavingsTotal.Text), Convert.ToDouble(cost_textbox.Text));
+
                 }
 
                 else
